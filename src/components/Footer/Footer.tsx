@@ -5,13 +5,8 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container`}>
-        <div className={styles.ctaBand}>
-          <h2 className={styles.ctaTitle}>Planning to build? Let&apos;s talk about it.</h2>
-          <Link href="/contact" className={styles.ctaButton}>
-            Book a consultation
-          </Link>
-        </div>
         
+
         <div className={styles.mainFooter}>
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>

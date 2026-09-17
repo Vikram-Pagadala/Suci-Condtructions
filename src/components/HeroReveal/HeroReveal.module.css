@@ -36,15 +36,15 @@
   z-index: 2;
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
-    transparent 0px,
-    transparent var(--r),
-    black calc(var(--r) + var(--feather))
+    var(--mask-center, transparent) 0px,
+    var(--mask-center, transparent) var(--r),
+    var(--mask-edge, black) calc(var(--r) + var(--feather))
   );
   mask-image: radial-gradient(
     circle at var(--x) var(--y),
-    transparent 0px,
-    transparent var(--r),
-    black calc(var(--r) + var(--feather))
+    var(--mask-center, transparent) 0px,
+    var(--mask-center, transparent) var(--r),
+    var(--mask-edge, black) calc(var(--r) + var(--feather))
   );
   will-change: mask-position;
 }

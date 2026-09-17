@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./HeroReveal.module.css";
 
 export default function HeroReveal() {
@@ -11,6 +11,7 @@ export default function HeroReveal() {
   const isInsideRef = useRef(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const isVisibleRef = useRef(true);
+  const [isShowingStructure, setIsShowingStructure] = useState(false);
 
   const currX = useRef(50);
   const currY = useRef(50);
@@ -122,15 +123,7 @@ export default function HeroReveal() {
     hero.addEventListener("touchmove", handleTouchMove, { passive: true });
     hero.addEventListener("touchend", handleTouchEnd);
 
-    const toggleBtn = document.getElementById("heroRevealToggle");
-    let showingStructure = false;
-    toggleBtn?.addEventListener("click", () => {
-      showingStructure = !showingStructure;
-      hero.style.setProperty("--r", showingStructure ? "9999px" : "0px");
-      hero.style.setProperty("--feather", showingStructure ? "0px" : `${FEATHER}px`);
-      if (toggleBtn) toggleBtn.textContent = showingStructure ? "Show Finished Building" : "Show Structure Drawing";
-    });
-
+    // Clean up event listeners
     return () => {
       hero.removeEventListener("pointermove", handlePointerMove);
       hero.removeEventListener("pointerenter", handlePointerEnter);
@@ -147,7 +140,14 @@ export default function HeroReveal() {
       ref={heroRef}
       className={styles.hero}
       aria-label="From structural design to completed building"
-      style={{ "--x": "50%", "--y": "50%", "--r": "0px", "--feather": `${FEATHER}px` } as React.CSSProperties}
+      style={{ 
+        "--x": "50%", 
+        "--y": "50%", 
+        "--r": "0px", 
+        "--feather": `${FEATHER}px`,
+        "--mask-center": isShowingStructure ? "black" : "transparent",
+        "--mask-edge": isShowingStructure ? "transparent" : "black"
+      } as React.CSSProperties}
     >
       {/* Bottom layer: blueprint */}
       <picture className={`${styles.layer} ${styles.layerStructure}`}>
@@ -169,7 +169,7 @@ export default function HeroReveal() {
         <span className={styles.ringTick} data-pos="right" />
         <span className={styles.ringTick} data-pos="bottom" />
         <span className={styles.ringTick} data-pos="left" />
-        <span className={styles.ringLabel}>STRUCTURE</span>
+        <span className={styles.ringLabel}>{isShowingStructure ? "FINISHED" : "STRUCTURE"}</span>
       </div>
 
       {/* Dark scrim on left side only */}
@@ -188,7 +188,9 @@ export default function HeroReveal() {
           <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
           <Link href="/projects" className={styles.secondaryButton}>See our projects</Link>
         </div>
-        <button id="heroRevealToggle" className={styles.toggleBtn}>Show Structure Drawing</button>
+        <button onClick={() => setIsShowingStructure(!isShowingStructure)} className={styles.toggleBtn}>
+          {isShowingStructure ? "Show Finished Building" : "Show Structure Drawing"}
+        </button>
       </div>
     </section>
   );

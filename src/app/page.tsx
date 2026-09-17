@@ -157,17 +157,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Band */}
-      <section className={styles.ctaBand}>
-        <div className={`container ${styles.ctaBandInner}`}>
-          <h2>Ready to start building?</h2>
-          <p>Tell us about your plot and we&apos;ll arrange a free consultation within one working day.</p>
-          <div className={styles.ctaActions}>
-            <Link href="/contact" className={styles.primaryButton}>Book a free consultation</Link>
-            <a href="tel:+917386858421" className={styles.ctaPhoneLink}>or call +91 73868 58421</a>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

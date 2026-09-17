@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={`container`}>
         <div className={styles.ctaBand}>
           <h2 className={styles.ctaTitle}>Planning to build? Let&apos;s talk about it.</h2>
-          <Link href="/get-a-quote" className={styles.ctaButton}>
+          <Link href="/contact" className={styles.ctaButton}>
             Book a consultation
           </Link>
         </div>
@@ -25,19 +25,19 @@ export default function Footer() {
           <div className={styles.linksColumn}>
             <h4>Company</h4>
             <Link href="/about">About</Link>
-            <Link href="/about/leadership">Leadership</Link>
             <Link href="/projects">Projects</Link>
-            <Link href="/careers">Careers</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contact">Contact</Link>
           </div>
           
           <div className={styles.linksColumn}>
             <h4>Services</h4>
-            <Link href="/services/residential-construction">Residential</Link>
-            <Link href="/services/villa-construction">Villas</Link>
-            <Link href="/services/commercial-construction">Commercial</Link>
-            <Link href="/services/peb-industrial">PEB & Industrial</Link>
-            <Link href="/services/interior-design">Interiors</Link>
-            <Link href="/services/renovation">Renovation</Link>
+            <Link href="/services">Residential</Link>
+            <Link href="/services">Villas</Link>
+            <Link href="/services">Commercial</Link>
+            <Link href="/services">PEB &amp; Industrial</Link>
+            <Link href="/services">Interiors</Link>
+            <Link href="/services">Renovation</Link>
           </div>
           
           <div className={styles.contactColumn}>
@@ -54,8 +54,7 @@ export default function Footer() {
         <div className={styles.bottomBar}>
           <p>© {new Date().getFullYear()} SUCI Constructions · GSTIN: 36ABCDE1234F1Z5</p>
           <div className={styles.legalLinks}>
-            <Link href="/privacy-policy">Privacy</Link>
-            <Link href="/terms-and-conditions">Terms</Link>
+            <span>All rights reserved.</span>
           </div>
         </div>
       </div>

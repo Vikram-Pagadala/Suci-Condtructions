@@ -24,7 +24,7 @@ export default function Header() {
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo */}
           <Link href="/" className={styles.logo} onClick={closeMenu}>
-            <img src={(scrolled || mobileOpen) ? "/assets/logos/suci-logo-blue.png" : "/assets/logos/suci-logo-white.png"} alt="SUCI Constructions" />
+            <img src="/assets/logos/suci-logo-white.png" alt="SUCI Constructions" />
           </Link>
 
           {/* Desktop Nav */}
@@ -34,13 +34,13 @@ export default function Header() {
               <button className={styles.dropbtn}>Services ▾</button>
               <div className={styles.dropdownContent}>
                 <Link href="/services">All Services</Link>
-                <Link href="/services/residential-construction">Residential</Link>
-                <Link href="/services/villa-construction">Villas</Link>
-                <Link href="/services/commercial-construction">Commercial</Link>
-                <Link href="/services/peb-industrial">PEB &amp; Industrial</Link>
-                <Link href="/services/architecture-planning">Architecture</Link>
-                <Link href="/services/structural-engineering">Structural Engineering</Link>
-                <Link href="/services/interior-design">Interiors</Link>
+                <Link href="/services">Residential</Link>
+                <Link href="/services">Villas</Link>
+                <Link href="/services">Commercial</Link>
+                <Link href="/services">PEB &amp; Industrial</Link>
+                <Link href="/services">Architecture</Link>
+                <Link href="/services">Structural Engineering</Link>
+                <Link href="/services">Interiors</Link>
               </div>
             </div>
             <Link href="/projects">Projects</Link>
@@ -50,7 +50,7 @@ export default function Header() {
           {/* Desktop Actions */}
           <div className={styles.actions}>
             <a href="tel:+917386858421" className={styles.phone}>+91 73868 58421</a>
-            <Link href="/get-a-quote" className={styles.ctaButton}>
+            <Link href="/contact" className={styles.ctaButton}>
               Book a consultation
             </Link>
           </div>
@@ -82,7 +82,7 @@ export default function Header() {
             <a href="tel:+917386858421" className={styles.mobilePhone} onClick={closeMenu}>
               +91 73868 58421
             </a>
-            <Link href="/get-a-quote" className={styles.mobileCta} onClick={closeMenu}>
+            <Link href="/contact" className={styles.mobileCta} onClick={closeMenu}>
               Book a consultation
             </Link>
           </div>

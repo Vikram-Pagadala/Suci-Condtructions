@@ -9,22 +9,22 @@ const serviceGroups = [
       {
         name: "Residential Construction",
         desc: "Independent houses G+1 to G+4, fully designed and built. Vastu-aware planning. GHMC / HMDA approval support. RCC framed structure with cube-tested concrete at every stage.",
-        link: "/services/residential-construction",
+        link: "/services",
       },
       {
         name: "Villa Construction",
         desc: "Luxury villas with bespoke architecture, premium material finishes, landscaping, and home automation-ready wiring. We also coordinate NRI remote-build updates with weekly photo reports.",
-        link: "/services/villa-construction",
+        link: "/services",
       },
       {
         name: "Commercial Construction",
         desc: "Offices, showrooms, mixed-use complexes. Fast-track schedules, fire and building code compliance, MEP coordination, and clean structural design that maximises usable floor space.",
-        link: "/services/commercial-construction",
+        link: "/services",
       },
       {
         name: "PEB & Industrial",
         desc: "Pre-engineered steel buildings for warehouses and factories. Faster erection, clear spans up to 60m, and full foundation and anchor bolt design by our structural engineers.",
-        link: "/services/peb-industrial",
+        link: "/services",
       },
     ],
   },
@@ -35,17 +35,17 @@ const serviceGroups = [
       {
         name: "Architecture Planning",
         desc: "Concept design, floor plans, 3D elevations and walkthroughs, working drawings, and municipal approval drawings. We submit to GHMC and HMDA on your behalf.",
-        link: "/services/architecture-planning",
+        link: "/services",
       },
       {
         name: "Structural Engineering",
         desc: "The core of what SUCI does. Structural design and analysis, soil-test interpretation, foundation design, structural audits of existing buildings, and retrofitting. All work carried out by our in-house M.Tech engineers.",
-        link: "/services/structural-engineering",
+        link: "/services",
       },
       {
         name: "Interior Design",
         desc: "Residential and office interiors, modular kitchens and wardrobes, material boards, 3D renders, and full execution. We design and build — no handoff to a separate interior contractor.",
-        link: "/services/interior-design",
+        link: "/services",
       },
     ],
   },
@@ -56,12 +56,12 @@ const serviceGroups = [
       {
         name: "Renovation",
         desc: "Home and commercial remodelling, structural strengthening for additional floors, waterproofing, and façade upgrades. We assess structural feasibility before any renovation begins.",
-        link: "/services/renovation",
+        link: "/services",
       },
       {
         name: "Project Management",
         desc: "Owner's representative on site. Cost control, quality audits, schedule tracking, and weekly photo reports. We manage your contractor so you don't have to.",
-        link: "/services/project-management",
+        link: "/services",
       },
     ],
   },
@@ -124,7 +124,7 @@ export default function ServicesPage() {
         <div className="container">
           <h2>Not sure which service you need?</h2>
           <p>Book a free consultation and our engineer will advise you based on your plot and requirements.</p>
-          <Link href="/get-a-quote" className={styles.ctaButton}>
+          <Link href="/contact" className={styles.ctaButton}>
             Book a free consultation
           </Link>
         </div>

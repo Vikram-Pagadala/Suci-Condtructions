@@ -112,7 +112,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.leadershipHeader}>
             <h2>Leadership</h2>
-            <Link href="/about/leadership" className={styles.textLink}>Meet the full team →</Link>
+            <Link href="/about" className={styles.textLink}>Meet the full team →</Link>
           </div>
           <div className={styles.leaderGrid}>
             <div className={styles.leaderCard}>
@@ -152,7 +152,7 @@ export default function AboutPage() {
             <div className={styles.officeCtaRight}>
               <h3>Ready to start your project?</h3>
               <p>Book a free consultation and our engineer will visit your plot within 2 working days.</p>
-              <Link href="/get-a-quote" className={styles.ctaButton}>Book a consultation</Link>
+              <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
             </div>
           </div>
         </div>

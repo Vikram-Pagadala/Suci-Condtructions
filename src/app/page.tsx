@@ -45,7 +45,7 @@ export default function Home() {
             <p>
               That rigour is what makes the finished building last — and look right. We believe true luxury comes from precision underneath, not decoration on top.
             </p>
-            <Link href="/about/leadership" className={styles.textLink}>Meet the founders →</Link>
+            <Link href="/about" className={styles.textLink}>Meet the founders →</Link>
           </div>
         </div>
       </section>
@@ -100,12 +100,12 @@ export default function Home() {
           <h2 className={styles.servicesSectionTitle}>What we build</h2>
           <div className={styles.servicesList}>
             {[
-              { name: "Villas & independent homes", link: "/services/villa-construction" },
-              { name: "Commercial buildings", link: "/services/commercial-construction" },
-              { name: "PEB & industrial structures", link: "/services/peb-industrial" },
-              { name: "Architecture & structural design", link: "/services/architecture-planning" },
-              { name: "Interiors & renovation", link: "/services/interior-design" },
-              { name: "Project management", link: "/services/project-management" },
+              { name: "Villas & independent homes", link: "/services" },
+              { name: "Commercial buildings", link: "/services" },
+              { name: "PEB & industrial structures", link: "/services" },
+              { name: "Architecture & structural design", link: "/services" },
+              { name: "Interiors & renovation", link: "/services" },
+              { name: "Project management", link: "/services" },
             ].map((service) => (
               <Link key={service.name} href={service.link} className={styles.serviceRow}>
                 <span>{service.name}</span>
@@ -163,7 +163,7 @@ export default function Home() {
           <h2>Ready to start building?</h2>
           <p>Tell us about your plot and we&apos;ll arrange a free consultation within one working day.</p>
           <div className={styles.ctaActions}>
-            <Link href="/get-a-quote" className={styles.primaryButton}>Book a free consultation</Link>
+            <Link href="/contact" className={styles.primaryButton}>Book a free consultation</Link>
             <a href="tel:+917386858421" className={styles.ctaPhoneLink}>or call +91 73868 58421</a>
           </div>
         </div>

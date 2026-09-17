@@ -185,7 +185,7 @@ export default function HeroReveal() {
           Structural engineers who design and build villas, homes and commercial spaces across Hyderabad.
         </p>
         <div className={styles.actions}>
-          <Link href="/get-a-quote" className={styles.ctaButton}>Book a consultation</Link>
+          <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
           <Link href="/projects" className={styles.secondaryButton}>See our projects</Link>
         </div>
         <button id="heroRevealToggle" className={styles.toggleBtn}>Show Structure Drawing</button>

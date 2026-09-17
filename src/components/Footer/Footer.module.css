@@ -75,6 +75,13 @@
   object-fit: contain;
 }
 
+.description {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
 .linksColumn, .contactColumn {
   display: flex;
   flex-direction: column;

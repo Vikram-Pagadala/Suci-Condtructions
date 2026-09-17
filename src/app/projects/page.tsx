@@ -59,7 +59,7 @@ export default async function ProjectsPage({
             filteredProjects.map((project, index) => (
               <Link
                 key={project.id}
-                href={`/projects/${project.id}`}
+                href="/projects"
                 className={`${styles.card} ${index % 3 === 0 ? styles.largeCard : ""}`}
               >
                 <div
@@ -94,7 +94,7 @@ export default async function ProjectsPage({
         <div className="container">
           <h2>Can&apos;t find what you&apos;re looking for?</h2>
           <p>We&apos;ve completed over 200 projects across Hyderabad. If you&apos;re looking for something specific, get in touch.</p>
-          <Link href="/get-a-quote" className={styles.ctaButton}>
+          <Link href="/contact" className={styles.ctaButton}>
             Book a consultation
           </Link>
         </div>

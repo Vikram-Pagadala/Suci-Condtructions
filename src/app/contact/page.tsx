@@ -108,8 +108,7 @@ export default function ContactPage() {
                 <div className={styles.formConsent}>
                   <input type="checkbox" id="consent" name="consent" required />
                   <label htmlFor="consent">
-                    I agree to SUCI Constructions contacting me about my enquiry. See our{" "}
-                    <a href="/privacy-policy">Privacy Policy</a>.
+                    I agree to SUCI Constructions contacting me about my enquiry.
                   </label>
                 </div>
                 <button type="submit" className={styles.submitButton}>

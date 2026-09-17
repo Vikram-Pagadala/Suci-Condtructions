@@ -154,6 +154,17 @@
   color: inherit;
   opacity: 0.9;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.phone span {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .phone span {
+    display: inline;
+  }
 }
 
 @media (min-width: 1024px) {

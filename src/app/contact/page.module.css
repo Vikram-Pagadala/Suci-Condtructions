@@ -1,8 +1,15 @@
 .hero {
-  padding-top: var(--space-144);
-  padding-bottom: var(--space-96);
+  padding-top: 110px;
+  padding-bottom: var(--space-64);
   background-color: var(--color-deccan-slate);
   color: var(--color-pure-white);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: var(--space-144);
+    padding-bottom: var(--space-96);
+  }
 }
 
 .hero h1 {
@@ -10,7 +17,11 @@
 }
 
 .contactSection {
-  padding: var(--space-96) 0;
+  padding: var(--space-48) 0;
+}
+
+@media (min-width: 768px) {
+  .contactSection { padding: var(--space-96) 0; }
 }
 
 .contactGrid {
@@ -74,8 +85,12 @@
 /* Right column — Form */
 .contactForm {
   background-color: var(--color-pure-white);
-  padding: var(--space-48);
+  padding: var(--space-24);
   border-top: 4px solid var(--color-aged-brass);
+}
+
+@media (min-width: 600px) {
+  .contactForm { padding: var(--space-48); }
 }
 
 .contactForm h3 {
@@ -187,4 +202,12 @@
 /* Map */
 .mapSection {
   margin-bottom: 0;
+}
+
+.mapSection iframe {
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .mapSection iframe { height: 450px; }
 }

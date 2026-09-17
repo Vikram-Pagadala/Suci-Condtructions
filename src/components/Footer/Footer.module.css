@@ -172,3 +172,26 @@
 .legalLinks a:hover {
   color: var(--color-pure-white);
 }
+
+/* Developer credit bar */
+.creditBar {
+  text-align: center;
+  padding: var(--space-12) 0 var(--space-16);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.3px;
+}
+
+.creditLink {
+  color: rgba(255,255,255,0.30);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.creditLink:hover {
+  color: var(--color-aged-brass);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+

@@ -1,11 +1,36 @@
+'use client';
+
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { useEffect, useRef } from 'react';
+
+// Credit line is stored as char-codes to prevent trivial source edits.
+// "Designed and Maintained By : Vikram Pagadala"
+const _c = [68,101,115,105,103,110,101,100,32,97,110,100,32,77,97,105,110,116,97,105,110,101,100,32,66,121,32,58,32,86,105,107,114,97,109,32,80,97,103,97,100,97,108,97];
+// "https://www.linkedin.com/in/vikrampagadala/"
+const _h = [104,116,116,112,115,58,47,47,119,119,119,46,108,105,110,107,101,100,105,110,46,99,111,109,47,105,110,47,118,105,107,114,97,109,112,97,103,97,100,97,108,97,47];
+
+function _d(arr: number[]) { return arr.map((n) => String.fromCharCode(n)).join(''); }
 
 export default function Footer() {
+  const creditRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!creditRef.current) return;
+    const label = _d(_c);
+    const href  = _d(_h);
+    const a = document.createElement('a');
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = label;
+    a.className = styles.creditLink;
+    creditRef.current.appendChild(a);
+  }, []);
+
   return (
     <footer className={styles.footer}>
       <div className={`container`}>
-        
 
         <div className={styles.mainFooter}>
           <div className={styles.brand}>
@@ -61,6 +86,11 @@ export default function Footer() {
           <div className={styles.legalLinks}>
             <span>All rights reserved.</span>
           </div>
+        </div>
+
+        {/* Developer credit — rendered client-side from obfuscated char codes */}
+        <div className={styles.creditBar}>
+          <span ref={creditRef} />
         </div>
       </div>
     </footer>

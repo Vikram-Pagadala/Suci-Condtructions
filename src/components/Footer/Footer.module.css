@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--color-deccan-slate);
+  color: var(--color-pure-white);
+  padding-top: var(--space-96);
+}
+
+.ctaBand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: var(--space-64);
+  border-bottom: 1px solid var(--color-tandur-stone);
+  margin-bottom: var(--space-64);
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .ctaBand {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ctaTitle {
+  font-family: var(--font-bodoni), serif;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+  max-width: 600px;
+}
+
+.ctaButton {
+  background-color: var(--color-aged-brass);
+  color: var(--color-deccan-slate);
+  padding: 16px 32px;
+  border-radius: 2px;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background-color: #C2410C;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.mainFooter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48);
+  margin-bottom: var(--space-64);
+}
+
+@media (min-width: 768px) {
+  .mainFooter {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.logo {
+  font-family: var(--font-bodoni), serif;
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+}
+
+.linksColumn, .contactColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.linksColumn h4, .contactColumn h4 {
+  color: var(--color-tandur-stone);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-base-mobile);
+}
+
+.linksColumn a, .contactColumn p {
+  color: var(--color-pure-white);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.linksColumn a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.phone {
+  margin-top: var(--space-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-32) 0;
+  border-top: 1px solid rgba(138, 139, 128, 0.3); /* tandur stone with opacity */
+  font-size: var(--font-base-mobile);
+  color: var(--color-tandur-stone);
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+  }
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--space-24);
+}
+
+.legalLinks a {
+  color: var(--color-tandur-stone);
+}
+
+.legalLinks a:hover {
+  color: var(--color-pure-white);
+}

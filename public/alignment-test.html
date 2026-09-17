@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Alignment Test</title>
+  <style>
+    body { margin: 0; background: #333; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+    .container { position: relative; width: 100%; max-width: 1200px; aspect-ratio: 16/9; overflow: hidden; border: 2px solid #555; }
+    img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+    .controls { margin-top: 20px; width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 10px; }
+    input[type=range] { width: 100%; }
+    label { display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <h1>Image Alignment Test</h1>
+  <p>Use the slider to fade between the two images. Check if the building edges, perspective, and horizon perfectly match.</p>
+  
+  <div class="container">
+    <img src="/assets/images/hero/building-structure.jpg" alt="Structure (Bottom)">
+    <img src="/assets/images/hero/building-final.jpg" alt="Final (Top)" id="topLayer">
+  </div>
+
+  <div class="controls">
+    <label>
+      <span>Structure</span>
+      <span>Final</span>
+    </label>
+    <input type="range" min="0" max="100" value="100" id="slider">
+    <div style="text-align: center; margin-top: 10px;">
+      <p>Opacity: <span id="opacityVal">100</span>%</p>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const topLayer = document.getElementById('topLayer');
+    const opacityVal = document.getElementById('opacityVal');
+
+    slider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      topLayer.style.opacity = val / 100;
+      opacityVal.textContent = val;
+    });
+  </script>
+</body>
+</html>

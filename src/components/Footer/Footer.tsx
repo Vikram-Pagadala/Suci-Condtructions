@@ -1,0 +1,62 @@
+import Link from 'next/link';
+import styles from './Footer.module.css';
+
+export default function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <div className={`container`}>
+        <div className={styles.ctaBand}>
+          <h2 className={styles.ctaTitle}>Planning to build? Let&apos;s talk about it.</h2>
+          <Link href="/get-a-quote" className={styles.ctaButton}>
+            Book a consultation
+          </Link>
+        </div>
+        
+        <div className={styles.mainFooter}>
+          <div className={styles.brand}>
+            <div className={styles.logo}>SUCI</div>
+            <p className={styles.description}>
+              We&apos;re structural engineers building high-quality homes and commercial spaces across Hyderabad.
+            </p>
+          </div>
+          
+          <div className={styles.linksColumn}>
+            <h4>Company</h4>
+            <Link href="/about">About</Link>
+            <Link href="/about/leadership">Leadership</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/careers">Careers</Link>
+          </div>
+          
+          <div className={styles.linksColumn}>
+            <h4>Services</h4>
+            <Link href="/services/residential-construction">Residential</Link>
+            <Link href="/services/villa-construction">Villas</Link>
+            <Link href="/services/commercial-construction">Commercial</Link>
+            <Link href="/services/peb-industrial">PEB & Industrial</Link>
+            <Link href="/services/interior-design">Interiors</Link>
+            <Link href="/services/renovation">Renovation</Link>
+          </div>
+          
+          <div className={styles.contactColumn}>
+            <h4>Visit us</h4>
+            <p>2-4-216, Rd 9A</p>
+            <p>Snehapuri Colony</p>
+            <p>New Nagole, Hyderabad 500035</p>
+            <p>Mon–Sat 9:30–6:30</p>
+            <p className={styles.phone}>+91 73868 58421</p>
+            <p>info@suciconstructions.com</p>
+          </div>
+        </div>
+        
+        <div className={styles.bottomBar}>
+          <p>© {new Date().getFullYear()} SUCI Constructions · GSTIN: 36ABCDE1234F1Z5</p>
+          <div className={styles.legalLinks}>
+            <Link href="/privacy-policy">Privacy</Link>
+            <Link href="/terms-and-conditions">Terms</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

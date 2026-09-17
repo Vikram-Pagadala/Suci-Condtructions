@@ -1,0 +1,183 @@
+.hero {
+  padding-top: var(--space-144);
+  padding-bottom: var(--space-64);
+  background-color: var(--color-deccan-slate);
+  color: var(--color-pure-white);
+}
+
+.hero h1 {
+  color: var(--color-pure-white);
+}
+
+.filterSection {
+  padding: var(--space-24) 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background-color: var(--color-pure-white);
+  position: sticky;
+  top: 72px;
+  z-index: 10;
+}
+
+.filterBar {
+  display: flex;
+  gap: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  scrollbar-width: none;
+}
+
+.filterBar::-webkit-scrollbar {
+  display: none;
+}
+
+.filterLink {
+  color: var(--color-tandur-stone);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-base-mobile);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  padding: var(--space-8) var(--space-16);
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.filterLink:hover {
+  color: var(--color-deccan-slate);
+  text-decoration: none;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.filterLink.active {
+  color: var(--color-pure-white);
+  background-color: var(--color-deccan-slate);
+  border-color: var(--color-deccan-slate);
+  text-decoration: none;
+}
+
+.gridSection {
+  padding: var(--space-64) 0 var(--space-96);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48) var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  color: inherit;
+}
+
+.card:hover {
+  text-decoration: none;
+}
+
+.largeCard {
+  grid-column: 1 / -1;
+}
+
+.cardImage {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.cardImageLarge {
+  height: 420px;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.03);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: var(--space-16);
+  left: var(--space-16);
+}
+
+.cardType {
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  padding: 4px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardInfo h3 {
+  margin-bottom: var(--space-8);
+  color: var(--color-deccan-slate);
+}
+
+.cardInfo p {
+  color: var(--color-tandur-stone);
+  font-size: var(--font-base-mobile);
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-96) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+.clearFilter {
+  color: var(--color-aged-brass);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* CTA Band */
+.ctaBand {
+  background-color: var(--color-deccan-slate);
+  color: var(--color-pure-white);
+  padding: var(--space-96) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.ctaBand h2 {
+  color: var(--color-pure-white);
+  margin-bottom: var(--space-16);
+}
+
+.ctaBand p {
+  opacity: 0.8;
+  margin-bottom: var(--space-32);
+  max-width: 560px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+  padding: 16px 32px;
+  border-radius: 2px;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #C2410C;
+  text-decoration: none;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,287 @@
+/* ============================================
+   HEADER (base — transparent over hero)
+   ============================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  padding: var(--space-24) 0;
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-pure-white);
+}
+
+.header.scrolled {
+  background-color: var(--color-deccan-slate);
+  padding: var(--space-16) 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+/* When NOT scrolled but on non-hero pages, header needs background */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+.logo {
+  font-family: var(--font-bodoni), serif;
+  font-size: 26px;
+  font-weight: var(--font-weight-medium);
+  color: inherit;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+/* ============================================
+   DESKTOP NAV
+   ============================================ */
+.nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+    gap: var(--space-32);
+    align-items: center;
+  }
+}
+
+.nav a {
+  color: inherit;
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.3px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--color-deccan-slate);
+  min-width: 220px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  z-index: 100;
+  border-radius: 2px;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px solid var(--color-aged-brass);
+}
+
+.dropdownContent a {
+  color: var(--color-pure-white);
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  opacity: 0.85;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.dropdownContent a:last-child {
+  border-bottom: none;
+}
+
+.dropdown:hover .dropdownContent,
+.dropdown:focus-within .dropdownContent {
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: rgba(249, 115, 22, 0.1);
+  opacity: 1;
+  color: var(--color-aged-brass);
+  text-decoration: none;
+}
+
+/* ============================================
+   DESKTOP ACTIONS
+   ============================================ */
+.actions {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-24);
+  }
+}
+
+.phone {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: inherit;
+  opacity: 0.85;
+  letter-spacing: 0.3px;
+}
+
+.phone:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.ctaButton {
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+  padding: 10px 22px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaButton:hover {
+  background-color: #C2410C;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   HAMBURGER (mobile only)
+   ============================================ */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-8);
+  z-index: 210;
+}
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-pure-white);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.barOpen1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barOpen2 {
+  opacity: 0;
+}
+
+.barOpen3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+   MOBILE MENU DRAWER
+   ============================================ */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-deccan-slate);
+  z-index: 199;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-96) var(--space-32) var(--space-64);
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: var(--space-64);
+}
+
+.mobileNav a {
+  font-family: var(--font-bodoni), serif;
+  font-size: 40px;
+  color: var(--color-pure-white);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: color 0.2s ease;
+}
+
+.mobileNav a:hover {
+  color: var(--color-aged-brass);
+  text-decoration: none;
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  align-items: flex-start;
+}
+
+.mobilePhone {
+  color: rgba(255,255,255,0.75);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+}
+
+.mobilePhone:hover {
+  color: var(--color-pure-white);
+  text-decoration: none;
+}
+
+.mobileCta {
+  display: inline-block;
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+  padding: 16px 32px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.2s ease;
+}
+
+.mobileCta:hover {
+  background-color: #C2410C;
+  text-decoration: none;
+}

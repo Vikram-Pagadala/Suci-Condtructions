@@ -42,9 +42,7 @@ export default function Footer() {
           
           <div className={styles.contactColumn}>
             <h4>Visit us</h4>
-            <p>2-4-216, Rd 9A</p>
-            <p>Snehapuri Colony</p>
-            <p>New Nagole, Hyderabad 500035</p>
+            <p>2-4-216, Rd 9A, Snehapuri Colony<br />New Nagole, Hyderabad 500035</p>
             <p>Mon–Sat 9:30–6:30</p>
             <p className={styles.phone}>+91 73868 58421</p>
             <p>info@suciconstructions.com</p>

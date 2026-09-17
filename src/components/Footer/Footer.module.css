@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--color-deccan-slate);
   color: var(--color-pure-white);
-  padding-top: var(--space-96);
+  padding-top: var(--space-64);
 }
 
 .ctaBand {
@@ -9,10 +9,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: var(--space-64);
+  padding-bottom: var(--space-32);
   border-bottom: 1px solid var(--color-tandur-stone);
-  margin-bottom: var(--space-64);
-  gap: var(--space-24);
+  margin-bottom: var(--space-48);
+  gap: var(--space-16);
 }
 
 @media (min-width: 768px) {
@@ -25,14 +25,16 @@
 .ctaTitle {
   font-family: var(--font-bodoni), serif;
   font-weight: var(--font-weight-medium);
+  font-size: 24px;
   margin: 0;
   max-width: 600px;
 }
 
 .ctaButton {
   background-color: var(--color-aged-brass);
-  color: var(--color-deccan-slate);
-  padding: 16px 32px;
+  color: var(--color-pure-white);
+  padding: 12px 24px;
+  font-size: 14px;
   border-radius: 2px;
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
@@ -49,13 +51,13 @@
 .mainFooter {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-48);
-  margin-bottom: var(--space-64);
+  gap: var(--space-32);
+  margin-bottom: var(--space-48);
 }
 
 @media (min-width: 768px) {
   .mainFooter {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
   }
 }
 
@@ -70,15 +72,15 @@
 }
 
 .logo img {
-  height: 56px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.75;
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 280px;
 }
 
@@ -90,14 +92,18 @@
 
 .linksColumn h4, .contactColumn h4 {
   color: var(--color-tandur-stone);
-  margin-bottom: var(--space-8);
-  font-size: var(--font-base-mobile);
+  margin-bottom: var(--space-4);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .linksColumn a, .contactColumn p {
   color: var(--color-pure-white);
-  opacity: 0.9;
+  opacity: 0.8;
   text-decoration: none;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .linksColumn a:hover {
@@ -106,8 +112,10 @@
 }
 
 .phone {
-  margin-top: var(--space-12);
+  margin-top: var(--space-4);
   font-weight: var(--font-weight-semibold);
+  color: var(--color-aged-brass) !important;
+  opacity: 1 !important;
 }
 
 .bottomBar {

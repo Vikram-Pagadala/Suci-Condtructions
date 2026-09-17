@@ -24,7 +24,7 @@ export default function Header() {
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo */}
           <Link href="/" className={styles.logo} onClick={closeMenu}>
-            SUCI
+            <img src="/assets/logos/FULL-LOGO.png" alt="SUCI Constructions" />
           </Link>
 
           {/* Desktop Nav */}

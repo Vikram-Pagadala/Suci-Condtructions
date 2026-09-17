@@ -29,12 +29,15 @@
    LOGO
    ============================================ */
 .logo {
-  font-family: var(--font-bodoni), serif;
-  font-size: 26px;
-  font-weight: var(--font-weight-medium);
-  color: inherit;
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
   z-index: 1;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* ============================================

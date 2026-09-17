@@ -14,7 +14,9 @@ export default function Footer() {
         
         <div className={styles.mainFooter}>
           <div className={styles.brand}>
-            <div className={styles.logo}>SUCI</div>
+            <Link href="/" className={styles.logo}>
+              <img src="/assets/logos/FULL-LOGO.png" alt="SUCI Constructions" />
+            </Link>
             <p className={styles.description}>
               We&apos;re structural engineers building high-quality homes and commercial spaces across Hyderabad.
             </p>

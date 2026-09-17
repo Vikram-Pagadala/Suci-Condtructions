@@ -66,9 +66,13 @@
 }
 
 .logo {
-  font-family: var(--font-bodoni), serif;
-  font-size: 32px;
-  font-weight: var(--font-weight-medium);
+  display: flex;
+}
+
+.logo img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
 }
 
 .linksColumn, .contactColumn {

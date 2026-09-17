@@ -109,10 +109,25 @@
 .linksColumn a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+  opacity: 1;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.contactItem svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--color-aged-brass);
+  opacity: 0.9;
 }
 
 .phone {
-  margin-top: var(--space-4);
   font-weight: var(--font-weight-semibold);
   color: var(--color-aged-brass) !important;
   opacity: 1 !important;

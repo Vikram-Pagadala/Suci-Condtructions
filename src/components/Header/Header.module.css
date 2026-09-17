@@ -127,6 +127,12 @@
 /* ============================================
    DESKTOP ACTIONS
    ============================================ */
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
 .actions {
   display: none;
 }
@@ -140,11 +146,21 @@
 }
 
 .phone {
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
   font-weight: var(--font-weight-medium);
   color: inherit;
-  opacity: 0.85;
+  opacity: 0.9;
   letter-spacing: 0.3px;
+}
+
+@media (min-width: 1024px) {
+  .phone {
+    font-size: 14px;
+    margin-right: 12px;
+  }
 }
 
 .phone:hover {

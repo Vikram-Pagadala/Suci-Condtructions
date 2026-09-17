@@ -82,14 +82,10 @@ export default function Footer() {
         </div>
         
         <div className={styles.bottomBar}>
-          <p>© {new Date().getFullYear()} SUCI Constructions · GSTIN: 36ABCDE1234F1Z5</p>
-          <div className={styles.legalLinks}>
-            <span>All rights reserved.</span>
-          </div>
-        </div>
-
-        {/* Developer credit — rendered client-side from obfuscated char codes */}
-        <div className={styles.creditBar}>
+          <p>© {new Date().getFullYear()} SUCI Constructions</p>
+          <span className={styles.bottomSep}>·</span>
+          <span>All rights reserved.</span>
+          <span className={styles.bottomSep}>·</span>
           <span ref={creditRef} />
         </div>
       </div>

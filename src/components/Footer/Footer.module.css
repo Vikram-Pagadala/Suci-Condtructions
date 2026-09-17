@@ -145,46 +145,40 @@
 .bottomBar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: var(--space-32) 0;
-  border-top: 1px solid rgba(138, 139, 128, 0.3); /* tandur stone with opacity */
-  font-size: var(--font-base-mobile);
-  color: var(--color-tandur-stone);
-  gap: var(--space-16);
+  border-top: 1px solid rgba(138, 139, 128, 0.3);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  gap: var(--space-12);
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .bottomBar {
     flex-direction: row;
+    gap: var(--space-16);
   }
 }
 
-.legalLinks {
-  display: flex;
-  gap: var(--space-24);
+.bottomBar p {
+  margin: 0;
 }
 
-.legalLinks a {
-  color: var(--color-tandur-stone);
+.bottomSep {
+  display: none;
 }
 
-.legalLinks a:hover {
-  color: var(--color-pure-white);
-}
-
-/* Developer credit bar */
-.creditBar {
-  text-align: center;
-  padding: var(--space-12) 0 var(--space-16);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-size: 11px;
-  color: rgba(255,255,255,0.25);
-  letter-spacing: 0.3px;
+@media (min-width: 768px) {
+  .bottomSep {
+    display: inline;
+    opacity: 0.5;
+  }
 }
 
 .creditLink {
-  color: rgba(255,255,255,0.30);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -194,4 +188,3 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-

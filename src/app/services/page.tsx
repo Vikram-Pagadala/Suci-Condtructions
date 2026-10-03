@@ -4,63 +4,63 @@ import styles from "./page.module.css";
 const serviceGroups = [
   {
     group: "Build",
-    tagline: "Turnkey construction from foundation to handover.",
+    tagline: "Complete construction from start to finish.",
     items: [
       {
         name: "Residential Construction",
-        desc: "Independent houses G+1 to G+4, fully designed and built. Vastu-aware planning. GHMC / HMDA approval support. RCC framed structure with cube-tested concrete at every stage.",
+        desc: "Independent houses with multiple floors, fully designed and built. Vastu-aware planning. Help with local approvals. Strong framework with concrete tested at every stage.",
         link: "/services",
       },
       {
         name: "Villa Construction",
-        desc: "Luxury villas with bespoke architecture, premium material finishes, landscaping, and home automation-ready wiring. We also coordinate NRI remote-build updates with weekly photo reports.",
+        desc: "Luxury villas with custom designs, premium finishes, landscaping, and smart home wiring. We also provide weekly photo reports for clients living abroad.",
         link: "/services",
       },
       {
         name: "Commercial Construction",
-        desc: "Offices, showrooms, mixed-use complexes. Fast-track schedules, fire and building code compliance, MEP coordination, and clean structural design that maximises usable floor space.",
+        desc: "Offices, showrooms, and mixed-use complexes. Fast completion, fire safety compliance, and clear designs that give you more usable floor space.",
         link: "/services",
       },
       {
-        name: "PEB & Industrial",
-        desc: "Pre-engineered steel buildings for warehouses and factories. Faster erection, clear spans up to 60m, and full foundation and anchor bolt design by our structural engineers.",
+        name: "Industrial & Steel Buildings",
+        desc: "Steel buildings for warehouses and factories. Built quickly with clear wide spaces, and complete foundation design by our engineers.",
         link: "/services",
       },
     ],
   },
   {
     group: "Design",
-    tagline: "Drawings that are accurate enough to build from on the first day.",
+    tagline: "Clear drawings that are ready for building on day one.",
     items: [
       {
         name: "Architecture Planning",
-        desc: "Concept design, floor plans, 3D elevations and walkthroughs, working drawings, and municipal approval drawings. We submit to GHMC and HMDA on your behalf.",
+        desc: "Concept design, floor plans, 3D views, working drawings, and drawings for municipal approval. We handle local permissions for you.",
         link: "/services",
       },
       {
         name: "Structural Engineering",
-        desc: "The core of what SUCI does. Structural design and analysis, soil-test interpretation, foundation design, structural audits of existing buildings, and retrofitting. All work carried out by our in-house M.Tech engineers.",
+        desc: "The core of what SUCI does. Structural design, understanding soil tests, foundation design, and checking existing buildings. All work is done by our own qualified engineers.",
         link: "/services",
       },
       {
         name: "Interior Design",
-        desc: "Residential and office interiors, modular kitchens and wardrobes, material boards, 3D renders, and full execution. We design and build — no handoff to a separate interior contractor.",
+        desc: "Home and office interiors, kitchens and wardrobes, material choices, 3D views, and full execution. We design and build it all ourselves.",
         link: "/services",
       },
     ],
   },
   {
     group: "Manage",
-    tagline: "Your interest, represented on site every day.",
+    tagline: "Looking after your interests on site every day.",
     items: [
       {
         name: "Renovation",
-        desc: "Home and commercial remodelling, structural strengthening for additional floors, waterproofing, and façade upgrades. We assess structural feasibility before any renovation begins.",
+        desc: "Home and office updates, adding strength for new floors, waterproofing, and fixing exteriors. We check if the structure is strong enough before any work begins.",
         link: "/services",
       },
       {
         name: "Project Management",
-        desc: "Owner's representative on site. Cost control, quality audits, schedule tracking, and weekly photo reports. We manage your contractor so you don't have to.",
+        desc: "We act as your representative on site. We check costs, quality, and progress, and send weekly photo reports. We manage the workers so you don't have to.",
         link: "/services",
       },
     ],

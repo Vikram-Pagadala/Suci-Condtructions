@@ -37,7 +37,7 @@ export default function Header() {
                 <Link href="/services">Residential</Link>
                 <Link href="/services">Villas</Link>
                 <Link href="/services">Commercial</Link>
-                <Link href="/services">PEB &amp; Industrial</Link>
+                <Link href="/services">Industrial &amp; Steel</Link>
                 <Link href="/services">Architecture</Link>
                 <Link href="/services">Structural Engineering</Link>
                 <Link href="/services">Interiors</Link>

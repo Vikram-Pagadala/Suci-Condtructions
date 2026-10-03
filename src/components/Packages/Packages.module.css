@@ -1,0 +1,341 @@
+/* ============================================
+   PACKAGES SECTION
+   ============================================ */
+.packagesSection {
+  padding: var(--space-96) 0;
+  background-color: var(--color-lime-plaster);
+}
+
+@media (min-width: 1024px) {
+  .packagesSection { padding: var(--space-144) 0; }
+}
+
+.header {
+  margin-bottom: var(--space-48);
+}
+
+@media (min-width: 768px) {
+  .header { margin-bottom: var(--space-64); }
+}
+
+.subtitle {
+  margin-top: var(--space-12);
+  color: var(--color-tandur-stone);
+  font-size: 15px;
+  max-width: 520px;
+}
+
+/* ============================================
+   MOBILE TABS
+   ============================================ */
+.mobileTabs {
+  display: flex;
+  background-color: var(--color-pure-white);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--space-24);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+@media (min-width: 900px) {
+  .mobileTabs { display: none; }
+}
+
+.mobileTab {
+  flex: 1;
+  padding: var(--space-12) var(--space-8);
+  border: none;
+  background: transparent;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-tandur-stone);
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mobileTabActive {
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+}
+
+/* ============================================
+   CARDS GRID
+   ============================================ */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-16);
+  }
+}
+
+.card {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-pure-white);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cardActive {
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .card {
+    display: flex;
+  }
+}
+
+.cardHeader {
+  padding: var(--space-24);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  text-align: center;
+}
+
+.packageName {
+  font-family: var(--font-bodoni), serif;
+  font-size: 22px;
+  color: var(--color-deccan-slate);
+  margin-bottom: var(--space-12);
+}
+
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.price {
+  font-family: var(--font-bodoni), serif;
+  font-size: 32px;
+  color: var(--color-aged-brass);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .price { font-size: 36px; }
+}
+
+.priceUnit {
+  font-size: 14px;
+  color: var(--color-tandur-stone);
+}
+
+.priceNote {
+  font-size: 12px;
+  color: var(--color-tandur-stone);
+  display: block;
+  margin-top: var(--space-4);
+}
+
+/* ============================================
+   ACCORDIONS
+   ============================================ */
+.accordionList {
+  flex: 1;
+  padding: 0 var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .accordionList { padding: 0 var(--space-24); }
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-12) 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-deccan-slate);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.accordionButton:hover {
+  color: var(--color-aged-brass);
+}
+
+.accordionIcon {
+  font-size: 18px;
+  color: var(--color-aged-brass);
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  line-height: 1;
+}
+
+.accordionPanel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordionPanelOpen {
+  max-height: 600px;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0 0 var(--space-12) 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.itemList li {
+  font-size: 12px;
+  color: var(--color-deccan-slate);
+  opacity: 0.8;
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+}
+
+.itemList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-aged-brass);
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+.ctaButton {
+  display: block;
+  text-align: center;
+  margin: var(--space-16);
+  padding: var(--space-12) var(--space-16);
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: 13px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .ctaButton { margin: var(--space-24); }
+}
+
+.ctaButton:hover {
+  background-color: #C2410C;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   COMPARE TOGGLE
+   ============================================ */
+.compareToggleWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-32);
+}
+
+.compareToggle {
+  background: transparent;
+  border: 1.5px solid var(--color-aged-brass);
+  color: var(--color-aged-brass);
+  padding: var(--space-12) var(--space-32);
+  border-radius: 2px;
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: var(--font-weight-semibold);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.compareToggle:hover {
+  background-color: var(--color-aged-brass);
+  color: var(--color-pure-white);
+}
+
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+.compareTableWrap {
+  margin-top: var(--space-48);
+}
+
+.compareTableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.compareTable {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.compareTable th {
+  background-color: var(--color-deccan-slate);
+  color: var(--color-pure-white);
+  padding: var(--space-16);
+  text-align: left;
+  font-family: var(--font-bodoni), serif;
+  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.compareTable th:first-child {
+  min-width: 120px;
+}
+
+.compareTable td {
+  padding: var(--space-16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  vertical-align: top;
+  color: var(--color-deccan-slate);
+}
+
+.compareCategoryName {
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}
+
+.compareItemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.compareItemList li {
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+}

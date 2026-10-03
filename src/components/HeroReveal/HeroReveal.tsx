@@ -179,14 +179,14 @@ export default function HeroReveal() {
       <div className={styles.content}>
         <p className={styles.eyebrow}>Engineering &amp; Construction</p>
         <h1 className={styles.headline}>
-          Homes and<br />buildings,<br />engineered<br />to last.
+          Homes and<br />Buildings,<br />Engineered<br />to last.
         </h1>
         <p className={styles.sub}>
           Structural engineers who design and build villas, homes and commercial spaces across Hyderabad.
         </p>
         <div className={styles.actions}>
           <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
-          <Link href="/projects" className={styles.secondaryButton}>See our projects</Link>
+          <Link href="#packages" className={styles.secondaryButton}>See our packages</Link>
         </div>
         <button onClick={() => setIsShowingStructure(!isShowingStructure)} className={styles.toggleBtn}>
           {isShowingStructure ? "Show Finished Building" : "Show Structure Drawing"}

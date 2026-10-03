@@ -55,7 +55,7 @@ export default function Footer() {
             <Link href="/services">Residential</Link>
             <Link href="/services">Villas</Link>
             <Link href="/services">Commercial</Link>
-            <Link href="/services">PEB &amp; Industrial</Link>
+            <Link href="/services">Industrial &amp; Steel</Link>
             <Link href="/services">Interiors</Link>
             <Link href="/services">Renovation</Link>
           </div>

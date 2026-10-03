@@ -86,7 +86,7 @@ export default function ContactPage() {
                     <option value="villa">Villa</option>
                     <option value="apartment">Apartment</option>
                     <option value="commercial">Commercial Building</option>
-                    <option value="peb">PEB / Industrial</option>
+                    <option value="peb">Industrial / Steel Building</option>
                     <option value="interior">Interior Design</option>
                     <option value="renovation">Renovation</option>
                     <option value="other">Other / Not sure yet</option>

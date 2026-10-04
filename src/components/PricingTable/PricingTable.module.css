@@ -154,7 +154,8 @@
 .tableContainer {
   position: relative;
   width: 100%;
-  overflow: visible;
+  overflow-x: auto;
+  overflow-y: hidden;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -162,7 +163,7 @@
 
 .row, .rowContent {
   display: grid;
-  grid-template-columns: minmax(160px, 1.2fr) repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(200px, 1.2fr) repeat(4, minmax(220px, 1fr));
 }
 
 .colFeatureHead, .colFeatureCell {
@@ -171,6 +172,9 @@
   padding: 16px;
   border-right: 1px solid #e2e8f0;
   font-weight: 600;
+  position: sticky;
+  left: 0;
+  z-index: 10;
 }
 
 .colPlanHead, .colPlanCell {
@@ -408,15 +412,11 @@
 }
 
 @media (max-width: 1023px) {
-  /* On tablet, the cards just flow naturally in the 2-column grid defined by .row */
-  .row, .rowContent { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .colFeatureHead, .colFeatureCell { grid-column: 1 / -1; border-bottom: 1px solid #e2e8f0; }
-  .colPlanCell::before { content: attr(data-plan); font-weight: 600; margin-bottom: 8px; }
+  .colFeatureHead, .colFeatureCell { grid-column: 1; border-bottom: 1px solid #e2e8f0; }
 }
 
 @media (max-width: 599px) {
   .areaInputSection, .findPlanSection { padding: 20px; }
-  .row, .rowContent { grid-template-columns: minmax(0, 1fr); }
   .colPlanHead { padding: 24px; border-right: none; }
   .priceSqft, .priceTotal, .planType { min-height: 0; }
   .priceTotal:empty { display: none; }

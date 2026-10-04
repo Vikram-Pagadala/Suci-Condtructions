@@ -21,12 +21,12 @@ export const packages: Package[] = [
       {
         title: "Structure",
         items: [
-          "Steel: Vizag | JSW Neo",
-          "Cement: Ultratech | Ramco Supercrete of 43 or 53 grade",
-          "Aggregates: 20mm & 40mm",
-          "Blocks: Standard Red Bricks (9 inch & 4 inch)",
-          "RCC Design Mix: M20 / M25 (or per structural designer recommendation)",
-          "Ceiling Height: 10 feet (Finished Floor Level to Finished Floor Level)"
+          "Steel - Shree | Radha",
+          "Cement - Zuari | Maha of 43 or 53 grade",
+          "Aggregates - 20mm & 40mm",
+          "Blocks - Standard Red Bricks. 9 inch & 4 inch",
+          "RCC Design Mix - M20 / M25 or As per the structural designer recommendation",
+          "Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)"
         ]
       },
       {
@@ -99,12 +99,12 @@ export const packages: Package[] = [
       {
         title: "Structure",
         items: [
-          "Steel: Vizag | JSW Neo",
-          "Cement: Ultratech | Ramco Supercrete of 43 or 53 grade",
-          "Aggregates: 20mm & 40mm",
-          "Blocks: Standard Red Bricks (9 inch & 4 inch)",
-          "RCC Design Mix: M20 / M25 (or per structural designer recommendation)",
-          "Ceiling Height: 10 feet (Finished Floor Level to Finished Floor Level)"
+          "Steel - Vizag | JSW Neo",
+          "Cement - Zuari | Maha of 43 or 53 grade",
+          "Aggregates - 20mm & 40mm",
+          "Blocks - Standard Red Bricks. 9 inch & 4 inch",
+          "RCC Design Mix - M20 / M25 or As per the structural designer recommendation",
+          "Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)"
         ]
       },
       {
@@ -179,12 +179,12 @@ export const packages: Package[] = [
       {
         title: "Structure",
         items: [
-          "Steel: Vizag | JSW Neo",
-          "Cement: Ultratech | Ramco Supercrete of 43 or 53 grade",
-          "Aggregates: 20mm & 40mm",
-          "Blocks: Standard Red Bricks (9 inch & 4 inch)",
-          "RCC Design Mix: M20 / M25 (or per structural designer recommendation)",
-          "Ceiling Height: 10 feet (Finished Floor Level to Finished Floor Level)"
+          "Steel - Vizag | JSW Neo",
+          "Cement - Ultratech | Ramco Supercrete of 43 or 53 grade",
+          "Aggregates - 20mm & 40mm",
+          "Blocks - Standard Red Bricks. 9 inch & 4 inch",
+          "RCC Design Mix - ACC or Ultratech M20 / M25 or As per the structural designer recommendation",
+          "Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)"
         ]
       },
       {
@@ -261,12 +261,12 @@ export const packages: Package[] = [
       {
         title: "Structure",
         items: [
-          "Steel: Vizag | JSW Neo",
-          "Cement: Ultratech | Ramco Supercrete of 43 or 53 grade",
-          "Aggregates: 20mm & 40mm",
-          "Blocks: Standard Red Bricks (9 inch & 4 inch)",
-          "RCC Design Mix: M20 / M25 (or per structural designer recommendation)",
-          "Ceiling Height: 10 feet (Finished Floor Level to Finished Floor Level)"
+          "Steel - Vizag | JSW Neo",
+          "Cement - Ultratech | Ramco Supercrete of 43 or 53 grade",
+          "Aggregates - 20mm & 40mm",
+          "Blocks - Standard Red Bricks. 9 inch & 4 inch",
+          "RCC Design Mix - ACC or Ultratech M20 / M25 or As per the structural designer recommendation",
+          "Ceiling Height - 10 feet (Finished Floor level to Finished Floor level)"
         ]
       },
       {

@@ -255,7 +255,7 @@ export const packages: Package[] = [
   {
     id: "elite",
     name: "Elite",
-    pricePerSqft: null, // TODO — Elite price not yet provided by the owner
+    pricePerSqft: 2950,
     priceNote: "incl. GST",
     categories: [
       {

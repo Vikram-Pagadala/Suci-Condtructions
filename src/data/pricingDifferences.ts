@@ -14,12 +14,12 @@ export interface PricingDifference {
 }
 
 export const pricingDifferences: PricingDifference[] = [
-  { category: "Structure", line: "Steel", basic: "Vizag / JSW Neo", valueAdded: "Vizag / JSW Neo", premium: "Vizag / JSW Neo", elite: "Vizag / JSW Neo" },
-  { category: "Structure", line: "Cement", basic: "Ultratech / Ramco", valueAdded: "Ultratech / Ramco", premium: "Ultratech / Ramco", elite: "Ultratech / Ramco" },
-  { category: "Structure", line: "Aggregates", basic: "20mm & 40mm", valueAdded: "20mm & 40mm", premium: "20mm & 40mm", elite: "20mm & 40mm" },
-  { category: "Structure", line: "Blocks", basic: "Standard Red Bricks (9 inch & 4 inch)", valueAdded: "Standard Red Bricks (9 inch & 4 inch)", premium: "Standard Red Bricks (9 inch & 4 inch)", elite: "Standard Red Bricks (9 inch & 4 inch)" },
-  { category: "Structure", line: "RCC design mix", basic: "M20 / M25", valueAdded: "M20 / M25", premium: "M20 / M25", elite: "M20 / M25" },
-  { category: "Structure", line: "Ceiling height", basic: "10 ft", valueAdded: "10 ft", premium: "10 ft", elite: "10 ft" },
+  { category: "Structure", line: "Steel", basic: "Shree | Radha", valueAdded: "Vizag | JSW Neo", premium: "Vizag | JSW Neo", elite: "Vizag | JSW Neo", thumbs: { basic: "steel.svg", valueAdded: "steel.svg" } },
+  { category: "Structure", line: "Cement", basic: "Zuari | Maha of 43 or 53 grade", valueAdded: "Zuari | Maha of 43 or 53 grade", premium: "Ultratech | Ramco Supercrete of 43 or 53 grade", elite: "Ultratech | Ramco Supercrete of 43 or 53 grade", thumbs: { basic: "cement.svg", premium: "cement.svg" } },
+  { category: "Structure", line: "Aggregates", basic: "20mm & 40mm", valueAdded: "20mm & 40mm", premium: "20mm & 40mm", elite: "20mm & 40mm", thumbs: { basic: "aggregates.svg" } },
+  { category: "Structure", line: "Blocks", basic: "Standard Red Bricks. 9 inch & 4 inch", valueAdded: "Standard Red Bricks. 9 inch & 4 inch", premium: "Standard Red Bricks. 9 inch & 4 inch", elite: "Standard Red Bricks. 9 inch & 4 inch", thumbs: { basic: "blocks.svg" } },
+  { category: "Structure", line: "RCC design mix", basic: "M20 / M25 or As per the structural designer recommendation", valueAdded: "M20 / M25 or As per the structural designer recommendation", premium: "ACC or Ultratech M20 / M25 or As per the structural designer recommendation", elite: "ACC or Ultratech M20 / M25 or As per the structural designer recommendation", thumbs: { basic: "rcc.svg", premium: "rcc.svg" } },
+  { category: "Structure", line: "Ceiling height", basic: "10 feet (Finished Floor level to Finished Floor level)", valueAdded: "10 feet (Finished Floor level to Finished Floor level)", premium: "10 feet (Finished Floor level to Finished Floor level)", elite: "10 feet (Finished Floor level to Finished Floor level)", thumbs: { basic: "ceiling.svg" } },
   { category: "Kitchen", line: "Kitchen wall dado (per sq ft)", basic: "₹50", valueAdded: "₹65", premium: "₹80", elite: "₹90" },
   { category: "Kitchen", line: "Main sink faucet", basic: "₹1,500", valueAdded: "₹2,200", premium: "₹2,800", elite: "₹3,500" },
   { category: "Kitchen", line: "Kitchen sink", basic: "SS ₹3,500", valueAdded: "SS ₹5,000", premium: "SS/Granite ₹6,500", elite: "SS/Granite ₹8,000" },

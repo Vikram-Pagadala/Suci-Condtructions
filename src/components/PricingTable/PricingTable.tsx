@@ -41,7 +41,6 @@ export default function PricingTable() {
   const [buildingType, setBuildingType] = useState(buildingTypes[1]); // Default first home
   const [selectedChips, setSelectedChips] = useState<string[]>([]);
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({});
-  const [showOnlyDifferences, setShowOnlyDifferences] = useState(false);
 
   // Recommendations
   const recommendedPlanIdx = useMemo(() => {
@@ -168,16 +167,6 @@ export default function PricingTable() {
 
       {/* 3. The Comparison Table */}
       <div className={styles.tableControls}>
-        <div className={styles.toggleWrap}>
-          <label className={styles.toggleLabel}>
-            <input 
-              type="checkbox" 
-              checked={showOnlyDifferences} 
-              onChange={(e) => setShowOnlyDifferences(e.target.checked)}
-            />
-            Show only differences
-          </label>
-        </div>
         <div className={styles.expandWrap}>
           <button onClick={expandAll} className={styles.textBtn}>Expand all</button>
           <span> | </span>
@@ -255,20 +244,17 @@ export default function PricingTable() {
                 {isOpen && (
                   <div className={styles.categoryContent}>
                     {catItems.map((item, rowIdx) => {
-                      // hide if all identical and showOnlyDifferences is true
-                      const isIdentical = item.basic === item.valueAdded && item.valueAdded === item.premium && item.premium === item.elite;
-                      if (showOnlyDifferences && isIdentical) return null;
-                      
                       return (
                         <div key={rowIdx} className={styles.rowContent}>
                           <div className={styles.colFeatureCell}>{item.line}</div>
                           {plans.map((p) => {
                             const val = item[p.id === "value-added" ? "valueAdded" : p.id as keyof typeof item] as string;
                             const isDash = val === "—";
-                            const thumbPath = item.thumbs ? item.thumbs[p.id === "value-added" ? "valueAdded" : p.id as "basic" | "premium" | "elite"] : null;
+                            const slug = item.line.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                            const thumbPath = `${slug}.svg`;
                             return (
                               <div key={p.id} data-plan={p.name} className={`${styles.colPlanCell} ${p.id === "value-added" ? styles.colRecommendedCell : ""}`}>
-                                {thumbPath && (
+                                {!isDash && (
                                   <img 
                                     src={`/assets/images/pricing/${thumbPath}`} 
                                     alt={val} 

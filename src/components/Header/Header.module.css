@@ -336,8 +336,8 @@
   z-index: 199;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: var(--space-96) var(--space-32) var(--space-64);
+  justify-content: flex-start; /* Prevent centering from pushing items into the header on short screens */
+  padding: 120px var(--space-32) var(--space-64); /* Hardcoded safe distance from the top header */
   overflow-y: auto;
 }
 

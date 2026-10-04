@@ -141,8 +141,8 @@ export default function AboutPage() {
           <div className={styles.leaderGrid}>
             {/* Founder 1: Er. C. A. Prasad */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder}>
-                {/* Owner to supply photo: /assets/images/founders/ca-prasad.jpg */}
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
+                <img src="/assets/images/founders/founder1.jpeg" alt="Er. C. A. Prasad" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Er. C. A. Prasad</h3>
@@ -156,8 +156,8 @@ export default function AboutPage() {
 
             {/* Founder 2: Dr. C. S. Rao */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder}>
-                {/* Owner to supply photo: /assets/images/founders/cs-rao.jpg */}
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
+                <img src="/assets/images/founders/founder2.jpeg" alt="Dr. C. S. Rao" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Dr. C. S. Rao</h3>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             {/* Founder 3: Siva Bharath Pulugu */}
             <div className={styles.leaderCard}>
               <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
-                <img src="/assets/images/founders/siva-bharath.jpg" alt="Siva Bharath Pulugu" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src="/assets/images/founders/founder3.jpeg" alt="Siva Bharath Pulugu" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Siva Bharath Pulugu</h3>

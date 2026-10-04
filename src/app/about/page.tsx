@@ -172,8 +172,8 @@ export default function AboutPage() {
 
             {/* Founder 3: Siva Bharath Pulugu */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder}>
-                {/* Owner to supply photo: /assets/images/founders/siva-bharath.jpg */}
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
+                <img src="/assets/images/founders/siva-bharath.jpg" alt="Siva Bharath Pulugu" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Siva Bharath Pulugu</h3>

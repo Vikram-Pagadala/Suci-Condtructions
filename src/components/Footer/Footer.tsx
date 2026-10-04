@@ -25,6 +25,7 @@ export default function Footer() {
     a.rel = 'noopener noreferrer';
     a.textContent = label;
     a.className = styles.creditLink;
+    creditRef.current.innerHTML = ''; // Clear out to prevent duplicates in React Strict Mode
     creditRef.current.appendChild(a);
   }, []);
 
@@ -38,7 +39,7 @@ export default function Footer() {
               <img src="/assets/logos/suci-logo-white.png" alt="SUCI Constructions" />
             </Link>
             <p className={styles.description}>
-              We&apos;re structural engineers building high-quality homes and commercial spaces across Hyderabad.
+              We&apos;re structural engineers building high-quality homes and commercial spaces. We serve both Telangana and Andhra Pradesh.
             </p>
           </div>
           
@@ -50,21 +51,14 @@ export default function Footer() {
             <Link href="/contact">Contact</Link>
           </div>
           
-          <div className={styles.linksColumn}>
-            <h4>Services</h4>
-            <Link href="/services">Residential</Link>
-            <Link href="/services">Villas</Link>
-            <Link href="/services">Commercial</Link>
-            <Link href="/services">Industrial &amp; Steel</Link>
-            <Link href="/services">Interiors</Link>
-            <Link href="/services">Renovation</Link>
-          </div>
-          
+
           <div className={styles.contactColumn}>
             <h4>Visit us</h4>
             <div className={styles.contactItem}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <p>2-4-216, Rd 9A, Snehapuri Colony<br />New Nagole, Hyderabad 500035</p>
+              <a href="https://maps.app.goo.gl/ZUyRYHumkC7Lw5jk9" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
+                2-4-216, Rd 9A, Snehapuri Colony<br />New Nagole, Hyderabad 500035
+              </a>
             </div>
             <div className={styles.contactItem}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>

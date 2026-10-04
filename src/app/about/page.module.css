@@ -1,7 +1,7 @@
 .hero {
   padding-top: var(--space-144);
   padding-bottom: var(--space-96);
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
 }
 
@@ -108,7 +108,7 @@
 /* Values */
 .valuesSection {
   padding: var(--space-96) 0;
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
 }
 
@@ -358,7 +358,7 @@
 /* Office CTA */
 .officeCta {
   padding: var(--space-96) 0;
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
 }
 

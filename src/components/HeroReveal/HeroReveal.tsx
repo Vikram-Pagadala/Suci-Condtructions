@@ -4,14 +4,16 @@ import Link from "next/link";
 import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./HeroReveal.module.css";
 
+const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
 export default function HeroReveal() {
-  const heroRef = useRef<HTMLElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number | null>(null);
   const isInsideRef = useRef(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const isVisibleRef = useRef(true);
-  const [isShowingStructure, setIsShowingStructure] = useState(false);
+  const [isShowingFinished, setIsShowingFinished] = useState(false);
 
   const currX = useRef(50);
   const currY = useRef(50);
@@ -36,13 +38,14 @@ export default function HeroReveal() {
     const ring = ringRef.current;
     if (!hero || !ring) return;
 
-    const r = currR.current;
+    const r = currR.current > 0.1 ? currR.current : 0;
     const x = currX.current;
     const y = currY.current;
 
     hero.style.setProperty("--x", `${x}%`);
     hero.style.setProperty("--y", `${y}%`);
     hero.style.setProperty("--r", `${r}px`);
+    hero.style.setProperty("--feather", r > 0 ? `${FEATHER}px` : "0px");
 
     const rect = hero.getBoundingClientRect();
     const pxX = (x / 100) * rect.width;
@@ -55,9 +58,9 @@ export default function HeroReveal() {
     ring.style.opacity = r > 2 ? "1" : "0";
   }, [FEATHER]);
 
-  const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
-
-  function loop() {
+  const loop = useCallback(function animate() {
+    // The scheduled frame has been consumed, even if the hero is offscreen.
+    rafRef.current = null;
     if (!isVisibleRef.current) return;
     const factor = prefersReducedMotion ? 1 : LERP;
     currX.current = lerp(currX.current, targetX.current, factor);
@@ -71,11 +74,9 @@ export default function HeroReveal() {
       Math.abs(currR.current - targetR.current) < 0.1;
 
     if (!settled) {
-      rafRef.current = requestAnimationFrame(loop);
-    } else {
-      rafRef.current = null;
+      rafRef.current = requestAnimationFrame(animate);
     }
-  }
+  }, [applyStyles, prefersReducedMotion]);
 
   const startLoop = useCallback(() => {
     if (rafRef.current === null) {
@@ -90,7 +91,7 @@ export default function HeroReveal() {
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
         isVisibleRef.current = entry.isIntersecting;
-        if (entry.isIntersecting && isInsideRef.current) startLoop();
+        if (entry.isIntersecting && (isInsideRef.current || currR.current > 0)) startLoop();
       },
       { threshold: 0 }
     );
@@ -122,6 +123,7 @@ export default function HeroReveal() {
     hero.addEventListener("pointerleave", handlePointerLeave);
     hero.addEventListener("touchmove", handleTouchMove, { passive: true });
     hero.addEventListener("touchend", handleTouchEnd);
+    hero.addEventListener("touchcancel", handleTouchEnd);
 
     // Clean up event listeners
     return () => {
@@ -130,65 +132,66 @@ export default function HeroReveal() {
       hero.removeEventListener("pointerleave", handlePointerLeave);
       hero.removeEventListener("touchmove", handleTouchMove);
       hero.removeEventListener("touchend", handleTouchEnd);
+      hero.removeEventListener("touchcancel", handleTouchEnd);
       observerRef.current?.disconnect();
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
     };
   }, [LENS_RADIUS, FEATHER, startLoop]);
 
   return (
     <section
-      ref={heroRef}
       className={styles.hero}
       aria-label="From structural design to completed building"
       style={{ 
         "--x": "50%", 
         "--y": "50%", 
         "--r": "0px", 
-        "--feather": `${FEATHER}px`,
-        "--mask-center": isShowingStructure ? "black" : "transparent",
-        "--mask-edge": isShowingStructure ? "transparent" : "black"
+        "--feather": "0px",
+        "--mask-center": isShowingFinished ? "black" : "transparent",
+        "--mask-edge": isShowingFinished ? "transparent" : "black"
       } as React.CSSProperties}
     >
-      {/* Bottom layer: blueprint / RCC structure */}
-      <picture className={`${styles.layer} ${styles.layerStructure}`}>
-        <img src="/assets/images/hero/rcc-placeholder.jpg" alt="[PLACEHOLDER] RCC structure image needed" draggable={false} />
-      </picture>
+      <div ref={heroRef} className={styles.imageStage}>
+        {/* Bottom layer: separate background image (finished building) */}
+        <picture className={`${styles.layer} ${styles.layerFinal}`}>
+          <img src="/assets/images/hero/hero-finished-synced.webp" alt="Completed SUCI Constructions building" width={1672} height={941} fetchPriority="high" draggable={false} />
+        </picture>
 
-      {/* Top layer: finished building (masked) */}
-      <picture className={`${styles.layer} ${styles.layerFinal}`}>
-        <source media="(max-width: 768px)" srcSet="/assets/images/hero/building-final-mobile.webp" />
-        <source srcSet="/assets/images/hero/building-final.webp" type="image/webp" />
-        <img src="/assets/images/hero/building-final.jpg" alt="Completed modern commercial building" fetchPriority="high" draggable={false} />
-      </picture>
+        {/* Top layer: structure image as the main visual (masked) */}
+        <picture className={`${styles.layer} ${styles.layerStructure}`}>
+          <img src="/assets/images/hero/hero-structure-synced.webp" alt="RCC column and beam frame of the same SUCI Constructions building" width={1672} height={941} fetchPriority="high" draggable={false} />
+        </picture>
 
-      {/* Lens ring */}
-      <div ref={ringRef} className={styles.ring} aria-hidden="true">
-        <span className={styles.ringTick} data-pos="top" />
-        <span className={styles.ringTick} data-pos="right" />
-        <span className={styles.ringTick} data-pos="bottom" />
-        <span className={styles.ringTick} data-pos="left" />
-        <span className={styles.ringLabel}>{isShowingStructure ? "FINISHED" : "STRUCTURE"}</span>
+        {/* Lens ring */}
+        <div ref={ringRef} className={styles.ring} aria-hidden="true">
+          <span className={styles.ringTick} data-pos="top" />
+          <span className={styles.ringTick} data-pos="right" />
+          <span className={styles.ringTick} data-pos="bottom" />
+          <span className={styles.ringTick} data-pos="left" />
+          <span className={styles.ringLabel}>{isShowingFinished ? "STRUCTURE" : "FINISHED"}</span>
+        </div>
+
       </div>
 
-      {/* Dark scrim on left side only */}
-      <div className={styles.scrim} aria-hidden="true" />
-
-      {/* Text pinned to left edge */}
-      <div className={styles.content}>
-        <p className={styles.eyebrow}>Engineering &amp; Construction</p>
-        <h1 className={styles.headline}>
-          Homes and<br />Buildings,<br />Engineered<br />to last.
-        </h1>
-        <p className={styles.sub}>
-          Structural engineers who design and build villas, homes and commercial spaces across Hyderabad.
-        </p>
-        <div className={styles.actions}>
-          <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
-          <Link href="#packages" className={styles.secondaryButton}>See our packages</Link>
+      {/* Text pinned to left edge, inside container for alignment */}
+      <div className={`container ${styles.contentContainer}`}>
+        <div className={styles.content}>
+          <p className={styles.eyebrow}>Engineering &amp; Construction</p>
+          <h1 className={styles.headline}>
+            Homes and<br />Buildings,<br />Engineered<br />to last.
+          </h1>
+          <p className={styles.sub}>
+            Structural engineers who design and build villas, homes and commercial spaces. We serve both Telangana and Andhra Pradesh.
+          </p>
+          <div className={styles.actions}>
+            <Link href="/contact" className={styles.ctaButton}>Book a consultation</Link>
+            <Link href="#packages" className={styles.secondaryButton}>See our packages</Link>
+          </div>
+          <button aria-pressed={isShowingFinished} onClick={() => setIsShowingFinished(!isShowingFinished)} className={styles.toggleBtn}>
+            {isShowingFinished ? "Show Structure Drawing" : "Show Finished Building"}
+          </button>
         </div>
-        <button onClick={() => setIsShowingStructure(!isShowingStructure)} className={styles.toggleBtn}>
-          {isShowingStructure ? "Show Finished Building" : "Show Structure Drawing"}
-        </button>
       </div>
     </section>
   );

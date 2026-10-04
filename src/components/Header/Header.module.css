@@ -7,16 +7,25 @@
   left: 0;
   width: 100%;
   z-index: 200;
-  padding: var(--space-32) 0;
+  padding: var(--space-12) 0;
   transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
   color: var(--color-pure-white);
 }
 
 .header.scrolled {
   background-color: var(--color-deccan-slate);
-  padding: var(--space-24) 0;
+  padding: var(--space-8) 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
+
+/* Dark lettering over the homepage's light hero; spacing and type stay the same. */
+.header.lightHero {
+  color: var(--color-deccan-slate);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.12));
+}
+
+.lightHero .phone { border-color: rgba(15, 32, 39, 0.2); }
+.lightHero .bar { background-color: var(--color-deccan-slate); }
 
 /* When NOT scrolled but on non-hero pages, header needs background */
 .headerContainer {
@@ -48,7 +57,7 @@
 }
 
 .logo img {
-  height: 48px;
+  height: 40px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
@@ -56,7 +65,7 @@
 
 @media (min-width: 768px) {
   .logo img {
-    height: 52px;
+    height: 44px;
   }
 }
 
@@ -260,9 +269,9 @@
 .ctaButton {
   background-color: var(--color-aged-brass);
   color: var(--color-pure-white);
-  padding: 10px 22px;
+  padding: 12px 24px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;

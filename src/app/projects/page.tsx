@@ -1,13 +1,13 @@
-/* Bug fix: searchParams must be Promise-based in Next.js App Router */
 import Link from "next/link";
 import styles from "./page.module.css";
+import ProjectImage from "./ProjectImage";
 
 const projects = [
-  { id: 1, location: "Chikkadpally", floors: "G+3", type: "", category: "Residential", bg: "#1a3a4a" },
-  { id: 2, location: "Champapet", floors: "G+2", type: "", category: "Residential", bg: "#2a2a4a" },
-  { id: 3, location: "Erragadda", floors: "S+4", type: "", category: "Residential", bg: "#1e3545" },
-  { id: 4, location: "Nagole, Samathapuri Colony", floors: "S+4", type: "Commercial", category: "Commercial", bg: "#1a2a1a" },
-  { id: 5, location: "Nagole, Snehapuri Colony", floors: "S+3", type: "Semi-commercial", category: "Commercial", bg: "#3a2a1a" },
+  { id: 1, location: "Chikkadpally", floors: "G+3", type: "Residential", category: "Residential", image: "/assets/images/projects/chikkadpally-g3.jpg" },
+  { id: 2, location: "Champapet", floors: "G+2", type: "Residential", category: "Residential", image: "/assets/images/projects/champapet-g2.jpg" },
+  { id: 3, location: "Erragadda", floors: "S+4", type: "Residential", category: "Residential", image: "/assets/images/projects/erragadda-s4.jpg" },
+  { id: 4, location: "Nagole, Samathapuri Colony", floors: "S+4", type: "Commercial", category: "Commercial", image: "/assets/images/projects/nagole-samathapuri-s4.jpg" },
+  { id: 5, location: "Nagole, Snehapuri Colony", floors: "S+3", type: "Semi-commercial", category: "Commercial", image: "/assets/images/projects/nagole-snehapuri-s3.jpg" },
 ];
 
 const filters = ["All", "Residential", "Commercial"];
@@ -31,7 +31,7 @@ export default async function ProjectsPage({
         <div className="container">
           <h1 className="display-text">Built work.</h1>
           <p className="body-large" style={{ marginTop: "var(--space-16)", opacity: 0.8 }}>
-            A selection of engineering and construction projects across Hyderabad.
+            A selection of engineering and construction projects. We serve both Telangana and Andhra Pradesh.
           </p>
         </div>
       </section>
@@ -44,6 +44,7 @@ export default async function ProjectsPage({
                 key={filter}
                 href={filter === "All" ? "/projects" : `/projects?type=${filter}`}
                 className={`${styles.filterLink} ${currentFilter === filter ? styles.active : ""}`}
+                aria-current={currentFilter === filter ? "page" : undefined}
               >
                 {filter}
               </Link>
@@ -55,19 +56,17 @@ export default async function ProjectsPage({
       <section className={styles.gridSection}>
         <div className={`container ${styles.grid}`}>
           {filteredProjects.length > 0 ? (
-            filteredProjects.map((project, index) => (
-              <Link
-                key={project.id}
-                href="/projects"
-                className={`${styles.card} ${index % 3 === 0 ? styles.largeCard : ""}`}
-              >
-                <div
-                  className={`${styles.cardImage} ${index % 3 === 0 ? styles.cardImageLarge : ""}`}
-                  style={{ backgroundColor: project.bg }}
-                >
+            filteredProjects.map((project) => (
+              <article key={project.id} className={styles.card}>
+                <div className={styles.cardImage}>
+                  <ProjectImage 
+                    src={project.image} 
+                    alt={`${project.floors} ${project.type} building in ${project.location}, Hyderabad`} 
+                  />
                   <div className={styles.cardOverlay}>
                     <span className={styles.cardType}>{project.type}</span>
                   </div>
+                  <div className={styles.representativeCaption}>Representative view</div>
                 </div>
                 <div className={styles.cardInfo}>
                   <h3>{project.location}</h3>
@@ -75,7 +74,7 @@ export default async function ProjectsPage({
                     {project.floors} {project.type ? `· ${project.type}` : ""}
                   </p>
                 </div>
-              </Link>
+              </article>
             ))
           ) : (
             <div className={styles.emptyState}>
@@ -92,7 +91,7 @@ export default async function ProjectsPage({
       <section className={styles.ctaBand}>
         <div className="container">
           <h2>Can&apos;t find what you&apos;re looking for?</h2>
-          <p>We&apos;ve completed over 200 projects across Hyderabad. If you&apos;re looking for something specific, get in touch.</p>
+          <p>We&apos;ve completed over 200 projects. We serve both Telangana and Andhra Pradesh. If you&apos;re looking for something specific, get in touch.</p>
           <Link href="/contact" className={styles.ctaButton}>
             Book a consultation
           </Link>

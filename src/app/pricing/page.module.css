@@ -39,7 +39,7 @@
 
 .cardHeader {
   padding: var(--space-32);
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
   text-align: center;
 }
@@ -117,7 +117,7 @@
 }
 
 .ctaBand {
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
   padding: var(--space-64) 0;
   text-align: center;

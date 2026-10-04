@@ -3,24 +3,31 @@
    ============================================ */
 .hero {
   position: relative;
+  display: grid;
   width: 100%;
-  height: 100svh;
-  min-height: 580px;
-  max-height: 900px;
-  overflow: hidden;
-  cursor: crosshair;
-  background: #0B1F3A;
+  padding-top: 104px;
+  background: #f8fafc;
   --x: 50%;
   --y: 50%;
   --r: 0px;
-  --feather: 28px;
+  --feather: 0px;
 }
 
-@media (min-width: 768px) {
-  .hero {
-    min-height: 640px;
-    max-height: none;
-    height: 100vh;
+.imageStage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+@media (min-width: 1024px) {
+  .hero { padding-top: 0; }
+  .imageStage {
+    grid-area: 1 / 1;
+    aspect-ratio: 16 / 9;
+    min-height: 740px;
+    height: 100%;
   }
 }
 
@@ -34,14 +41,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 75% center;
   user-select: none;
   pointer-events: none;
 }
 
-.layerStructure { z-index: 1; }
-
-.layerFinal {
+.layerStructure {
   z-index: 2;
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
@@ -58,69 +63,45 @@
   will-change: mask-position;
 }
 
+.layerFinal { z-index: 1; }
+
 @supports not (mask-image: radial-gradient(black, transparent)) {
-  .hero:hover .layerFinal {
+  .hero:hover .layerStructure {
     opacity: 0;
     transition: opacity 0.4s ease;
   }
 }
 
-/* ============================================
-   SCRIM — dark gradient on left side for text readability
-   ============================================ */
-.scrim {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: linear-gradient(
-    to right,
-    rgba(11, 31, 58, 0.95) 0%,
-    rgba(11, 31, 58, 0.88) 40%,
-    rgba(11, 31, 58, 0.50) 65%,
-    transparent 100%
-  );
+/* A light white backing replaces the navy tint without moving the copy. */
+.contentContainer {
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 40px;
   pointer-events: none;
 }
 
-@media (max-width: 600px) {
-  .scrim {
-    background: rgba(11, 31, 58, 0.75);
-  }
-}
-
-/* ============================================
-   TEXT CONTENT — pinned to left edge
-   ============================================ */
 .content {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  pointer-events: none;
-  padding: 90px 16px 48px 16px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
+  pointer-events: auto;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.45);
 }
 
-@media (min-width: 480px) {
-  .content {
-    padding: 100px 24px 60px 24px;
-    max-width: 440px;
+@media (min-width: 1024px) {
+  .contentContainer {
+    grid-area: 1 / 1;
+    padding-top: 130px;
+    padding-bottom: 48px;
   }
-}
-
-@media (min-width: 768px) {
   .content {
-    padding: 100px 0 60px 48px;
-    max-width: 400px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .content {
-    padding-left: 72px;
-    max-width: 420px;
+    max-width: 520px;
+    padding: 24px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.38) 75%, transparent 100%);
   }
 }
 
@@ -129,36 +110,36 @@
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(79, 195, 247, 0.85);
+  color: var(--color-aged-brass);
   margin-bottom: 20px;
 }
 
 .headline {
   font-family: var(--font-bodoni), serif;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 33px;
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--color-deccan-slate);
   margin: 0 0 16px;
 }
 
 @media (min-width: 480px) {
-  .headline { font-size: 34px; }
+  .headline { font-size: 40px; }
 }
 
 @media (min-width: 768px) {
-  .headline { font-size: 40px; margin: 0 0 18px; }
+  .headline { font-size: 47px; margin: 0 0 18px; }
 }
 
 @media (min-width: 1280px) {
-  .headline { font-size: 48px; }
+  .headline { font-size: 56px; }
 }
 
 .sub {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 320px;
+  color: #243641;
+  max-width: 380px;
   margin-bottom: 28px;
 }
 
@@ -183,14 +164,16 @@
   display: inline-block;
   background-color: #f04f26;
   color: #ffffff;
-  padding: 11px 22px;
-  border-radius: 2px;
+  padding: 12px 28px;
+  border-radius: 999px;
   border: 1.5px solid #f04f26;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(240, 79, 38, 0.25);
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 .ctaButton:hover {
   background-color: #d63e17;
@@ -202,41 +185,45 @@
 
 .secondaryButton {
   display: inline-block;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.85);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  padding: 11px 22px;
-  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--color-deccan-slate);
+  border: 1.5px solid var(--color-deccan-slate);
+  padding: 12px 28px;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: border-color 0.2s ease, background-color 0.2s ease;
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 .secondaryButton:hover {
-  border-color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.06);
+  border-color: var(--color-deccan-slate);
+  background-color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   cursor: pointer;
 }
 
 .toggleBtn {
   pointer-events: auto;
-  background: none;
-  border: 1px solid rgba(79, 195, 247, 0.3);
-  color: rgba(79, 195, 247, 0.7);
-  padding: 5px 12px;
-  border-radius: 2px;
-  font-size: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--color-deccan-slate);
+  color: var(--color-deccan-slate);
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
   align-self: flex-start;
 }
 .toggleBtn:hover {
-  border-color: rgba(79, 195, 247, 0.7);
-  color: rgba(79, 195, 247, 1);
+  border-color: var(--color-deccan-slate);
+  color: var(--color-deccan-slate);
 }
 .toggleBtn:focus-visible {
   outline: 2px solid #4FC3F7;
@@ -248,6 +235,7 @@
    ============================================ */
 .ring {
   position: absolute;
+  opacity: 0;
   top: 0;
   left: 0;
   z-index: 5;
@@ -290,7 +278,7 @@
    TOUCH / REDUCED MOTION
    ============================================ */
 @media (hover: none) {
-  .hero { cursor: default; touch-action: pan-y; }
+  .imageStage { cursor: default; touch-action: pan-y; }
   .ring { display: none; }
 }
 

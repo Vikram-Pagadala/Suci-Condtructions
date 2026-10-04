@@ -4,8 +4,30 @@ import HeroReveal from '@/components/HeroReveal/HeroReveal';
 import Packages from '@/components/Packages/Packages';
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SUCI Constructions",
+    "url": "https://suci-constructions.vercel.app",
+    "logo": "https://suci-constructions.vercel.app/assets/logos/suci-logo.png",
+    "telephone": "+91 73868 58421",
+    "email": "info@suciconstructions.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2-4-216, Road No. 9A, Snehapuri Colony, New Nagole",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500035",
+      "addressCountry": "IN"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroReveal />
 
       {/* Figures Band */}
@@ -40,7 +62,7 @@ export default function Home() {
             <h2>Founded by Structural Engineers</h2>
           </div>
           <div className={styles.introRight}>
-            <p className="body-large">
+            <p>
               SUCI Constructions is a construction company led by engineers. It was started by structural engineers with one simple aim: to build homes with the same care and planning that goes into designing a safe structure.
             </p>
             <p>

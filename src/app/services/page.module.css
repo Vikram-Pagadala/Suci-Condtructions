@@ -1,7 +1,7 @@
 .hero {
   padding-top: var(--space-144);
   padding-bottom: var(--space-96);
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
 }
 
@@ -94,7 +94,7 @@
 }
 
 .serviceRow:hover {
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
   padding-left: var(--space-24);
   padding-right: var(--space-24);
@@ -152,7 +152,7 @@
 
 .ctaButton {
   display: inline-block;
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
   padding: 16px 32px;
   border-radius: 2px;

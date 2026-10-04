@@ -16,7 +16,7 @@
    FIGURES BAND
    ============================================ */
 .figuresBand {
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
   padding: var(--space-48) 0;
 }
@@ -120,6 +120,10 @@
   flex-direction: column;
   gap: var(--space-24);
   align-items: flex-start;
+}
+
+.introRight p {
+  text-align: justify;
 }
 
 @media (min-width: 1024px) {
@@ -307,7 +311,7 @@
    ============================================ */
 .confidenceSection {
   padding: var(--space-64) 0;
-  background-color: var(--color-deccan-slate);
+  background-color: rgba(15, 32, 39, 0.85);
   color: var(--color-pure-white);
 }
 

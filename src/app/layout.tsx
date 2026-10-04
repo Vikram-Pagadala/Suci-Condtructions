@@ -17,8 +17,18 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SUCI Constructions — Engineer-Led Construction Company in Hyderabad",
-  description: "Structural engineers who design and build villas, homes and commercial spaces across Hyderabad.",
+  title: "SUCI Constructions — Engineer-Led Construction Company in Telangana and Andhra Pradesh",
+  description: "Structural engineers who design and build villas, homes and commercial spaces. We serve both Telangana and Andhra Pradesh.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="/assets/images/hero/building-final.webp" type="image/webp" />
-        <link rel="preload" as="image" href="/assets/images/hero/building-structure.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/assets/images/hero/hero-finished-synced.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/assets/images/hero/hero-structure-synced.webp" type="image/webp" />
       </head>
       <body className={`${bodoni.variable} ${manrope.variable}`}>
         <a href="#main-content" className="skip-link">Skip to main content</a>

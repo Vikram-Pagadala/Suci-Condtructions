@@ -1,26 +1,34 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
     };
     window.addEventListener("scroll", handleScroll);
+    // Trigger once on mount
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close menu on route change (if user taps a link)
   const closeMenu = () => setMobileOpen(false);
 
+  const isHome = pathname === "/";
+  // Force solid background if not on home page, or if scrolled
+  const headerClasses = `${styles.header} ${(!isHome || scrolled) ? styles.scrolled : ""} ${isHome && !scrolled && !mobileOpen ? styles.lightHero : ""} ${mobileOpen ? styles.mobileMenuOpen : ""}`;
+
   return (
     <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${mobileOpen ? styles.mobileMenuOpen : ""}`}>
+      <header className={headerClasses}>
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo */}
           <Link href="/" className={styles.logo} onClick={closeMenu}>
@@ -30,19 +38,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className={styles.nav}>
             <Link href="/about">About</Link>
-            <div className={styles.dropdown}>
-              <button className={styles.dropbtn}>Services ▾</button>
-              <div className={styles.dropdownContent}>
-                <Link href="/services">All Services</Link>
-                <Link href="/services">Residential</Link>
-                <Link href="/services">Villas</Link>
-                <Link href="/services">Commercial</Link>
-                <Link href="/services">Industrial &amp; Steel</Link>
-                <Link href="/services">Architecture</Link>
-                <Link href="/services">Structural Engineering</Link>
-                <Link href="/services">Interiors</Link>
-              </div>
-            </div>
+            <Link href="/services">Services</Link>
             <Link href="/projects">Projects</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/contact">Contact</Link>

@@ -32,6 +32,19 @@
   display: flex;
   align-items: center;
   z-index: 1;
+  margin-right: var(--space-24);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--color-aged-brass);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+.logo:hover {
+  background-color: #d63e17;
+  border-color: rgba(240, 79, 38, 0.3);
+  transform: scale(1.03);
+  text-decoration: none;
 }
 
 .logo img {

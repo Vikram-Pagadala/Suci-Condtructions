@@ -117,13 +117,19 @@ export default function AboutPage() {
           <div className={styles.timeline}>
             {[
               { year: "2010", title: "PS Engineering Consultants", text: "We began as a partnership firm, offering structural engineering consultancy only." },
-              { year: "2013", title: "METEY Engineering & Consultancy Pvt. Ltd.", text: "We grew into a private limited company, adding architecture, building services (electrical, plumbing and air-conditioning) and interiors to our structural design work, for many types of projects across India." },
+              { year: "2013", title: "METEY Engineering & Consultancy Pvt. Ltd.", text: "We grew into a private limited company, adding architecture, building services (electrical, plumbing and air-conditioning) and interiors to our structural design work, for many types of projects across India.", link: "https://metey.in/" },
               { year: "2025", title: "SUCI Constructions", text: "We started building homes ourselves, bringing our design experience directly to the site." },
             ].map((m) => (
               <div key={m.year} className={styles.timelineItem}>
                 <span className={styles.timelineYear}>{m.year}</span>
                 <div>
-                  <strong className={styles.timelineTitle}>{m.title}</strong>
+                  <strong className={styles.timelineTitle}>
+                    {m.link ? (
+                      <a href={m.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit' }}>{m.title}</a>
+                    ) : (
+                      m.title
+                    )}
+                  </strong>
                   <p>{m.text}</p>
                 </div>
               </div>
@@ -147,7 +153,7 @@ export default function AboutPage() {
               <div className={styles.leaderInfo}>
                 <h3>Er. C. A. Prasad</h3>
                 <p className={styles.leaderQual}>Founder &amp; Director, SUCI Constructions</p>
-                <p className={styles.leaderQual}>Founder &amp; Director, METEY Engineering &amp; Consultancy Pvt. Ltd.</p>
+                <p className={styles.leaderQual}>Founder &amp; Director, <a href="https://metey.in/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit' }}>METEY Engineering &amp; Consultancy Pvt. Ltd.</a></p>
                 <p>
                   With more than 40 years in engineering, Er. C. A. Prasad has worked on many kinds of projects across India, including multi-storey towers, villas, commercial spaces, hospitals, college buildings, pharma facilities and warehouses. His work has also taken him to the UAE, where he was part of well-known projects including the Burj Al Arab. He is the Founder Secretary of the Pre-Engineered Structures Society of India (PSI), which shares knowledge about new ways of building.
                 </p>

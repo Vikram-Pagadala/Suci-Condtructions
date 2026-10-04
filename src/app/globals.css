@@ -54,6 +54,10 @@ body {
   line-height: 1.65;
 }
 
+p {
+  text-align: justify;
+}
+
 @media (min-width: 768px) {
   html, body {
     font-size: var(--font-base-desktop);

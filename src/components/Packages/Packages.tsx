@@ -36,7 +36,6 @@ export default function Packages() {
               </div>
               <div className={styles.recommendationBody}>
                 <p className={styles.bestFor}>Best for {planRecommendations[pkg.id].bestFor}.</p>
-                <ul>{planRecommendations[pkg.id].benefits.map(benefit => <li key={benefit}>{benefit}</li>)}</ul>
               </div>
             </div>
           ))}

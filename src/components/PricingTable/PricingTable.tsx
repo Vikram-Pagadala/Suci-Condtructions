@@ -205,7 +205,6 @@ export default function PricingTable() {
                   {p.price ? `₹${(p.price * area).toLocaleString("en-IN")}` : ""}
                 </div>
                 <p className={styles.planType}>Best for {planRecommendations[p.id].bestFor}.</p>
-                <ul className={styles.benefits}>{planRecommendations[p.id].benefits.map(benefit => <li key={benefit}>{benefit}</li>)}</ul>
               </div>
             ))}
           </div>

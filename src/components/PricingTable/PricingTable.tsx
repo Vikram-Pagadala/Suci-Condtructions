@@ -188,9 +188,14 @@ export default function PricingTable() {
       <div className={styles.tableContainer}>
         {/* Plan cards */}
         <div className={styles.stickyHeader}>
-          <div className={styles.planCards}>
+          <div className={`${styles.row} ${styles.planCardsRow}`}>
+            <div className={styles.colFeatureHead} style={{ borderBottom: "none" }}>
+              <div style={{ height: "100%", display: "flex", alignItems: "flex-end", paddingBottom: "16px" }}>
+                <h3 style={{ fontSize: "24px", color: "var(--color-deccan-slate)" }}>Compare Plans</h3>
+              </div>
+            </div>
             {plans.map((p) => (
-              <div key={p.id} className={`${styles.colPlanHead} ${p.id === "value-added" ? styles.colRecommended : ""}`}>
+              <div key={p.id} className={`${styles.colPlanHead} ${p.id === "value-added" ? styles.colRecommendedHead : ""}`}>
                 <div className={styles.badgeSlot}>{p.id === "value-added" && <span className={styles.ribbon}>Recommended</span>}</div>
                 <h3>{p.name}</h3>
                 <div className={styles.priceSqft}>
@@ -206,20 +211,10 @@ export default function PricingTable() {
           </div>
         </div>
 
-        {/* Trust strip for Structure */}
-        <div className={styles.trustStrip}>
-          <strong>Structure (Same in all plans):</strong> Every plan gets the same engineering: Vizag / JSW Neo steel, Ultratech / Ramco cement, M20/M25 design mix, 10 ft ceilings.
-        </div>
-
-        {/* Categories */}
         <div className={styles.tableBody}>
-          <div className={`${styles.row} ${styles.comparisonHeader}`}>
-            <div className={styles.colFeatureHead}>Inclusions</div>
-            {plans.map(p => (
-              <div key={p.id} className={`${styles.colPlanCell} ${p.id === "value-added" ? styles.colRecommendedCell : ""}`}>
-                {p.name}
-              </div>
-            ))}
+          {/* Trust strip as a full-width row inside the table */}
+          <div className={styles.trustStripRow}>
+            <strong>Structure (Same in all plans):</strong> Every plan gets the same engineering: Vizag / JSW Neo steel, Ultratech / Ramco cement, M20/M25 design mix, 10 ft ceilings.
           </div>
           {categories.map(cat => {
             const isOpen = openCategories[cat];

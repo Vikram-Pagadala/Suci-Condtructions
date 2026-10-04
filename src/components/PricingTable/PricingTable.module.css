@@ -183,18 +183,32 @@
 }
 
 .colPlanCell { border-right: 1px solid #e2e8f0; }
-.planCards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 16px; }
-.colPlanHead { border: 2px solid #e2e8f0; border-radius: 8px; }
+
+.planCardsRow {
+  background: white;
+}
+
+.colPlanHead {
+  min-width: 0;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 2px solid #e2e8f0;
+}
+
 .colPlanHead h3 { font-size: 24px; min-height: 30px; }
 .badgeSlot { min-height: 32px; }
 .benefits { padding-left: 18px; margin: 16px 0; flex: 1; font-size: 14px; }
 .benefits li { margin-bottom: 12px; }
 .benefits li::marker { color: var(--color-aged-brass); }
 
-.colRecommended {
+.colRecommendedHead {
   background: #f8fafc;
   border-left: 2px solid var(--color-aged-brass);
   border-right: 2px solid var(--color-aged-brass);
+  border-top: 4px solid var(--color-aged-brass);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   z-index: 5;
 }
@@ -264,7 +278,7 @@
   text-decoration: none;
 }
 
-.trustStrip {
+.trustStripRow {
   padding: 16px;
   background: #f1f5f9;
   text-align: center;
@@ -394,8 +408,7 @@
 }
 
 @media (max-width: 1023px) {
-  .comparisonHeader { display: none; }
-  .planCards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* On tablet, the cards just flow naturally in the 2-column grid defined by .row */
   .row, .rowContent { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .colFeatureHead, .colFeatureCell { grid-column: 1 / -1; border-bottom: 1px solid #e2e8f0; }
   .colPlanCell::before { content: attr(data-plan); font-weight: 600; margin-bottom: 8px; }
@@ -403,8 +416,8 @@
 
 @media (max-width: 599px) {
   .areaInputSection, .findPlanSection { padding: 20px; }
-  .planCards, .row, .rowContent { grid-template-columns: minmax(0, 1fr); }
-  .colPlanHead { padding: 24px; }
+  .row, .rowContent { grid-template-columns: minmax(0, 1fr); }
+  .colPlanHead { padding: 24px; border-right: none; }
   .priceSqft, .priceTotal, .planType { min-height: 0; }
   .priceTotal:empty { display: none; }
   .chip { max-width: 100%; text-align: left; }

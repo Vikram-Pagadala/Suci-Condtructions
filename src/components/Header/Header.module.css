@@ -41,8 +41,8 @@
 }
 
 .logo:hover {
-  background-color: #C2410C;
-  border-color: rgba(249, 115, 22, 0.3);
+  background-color: #d63e17;
+  border-color: rgba(240, 79, 38, 0.3);
   transform: scale(1.03);
   text-decoration: none;
 }
@@ -138,7 +138,7 @@
 }
 
 .dropdownContent a:hover {
-  background-color: rgba(249, 115, 22, 0.1);
+  background-color: rgba(240, 79, 38, 0.1);
   opacity: 1;
   color: var(--color-aged-brass);
   text-decoration: none;
@@ -270,7 +270,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #C2410C;
+  background-color: #d63e17;
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -390,6 +390,6 @@
 }
 
 .mobileCta:hover {
-  background-color: #C2410C;
+  background-color: #d63e17;
   text-decoration: none;
 }

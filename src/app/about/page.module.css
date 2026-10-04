@@ -291,7 +291,7 @@
   text-underline-offset: 4px;
 }
 .textLink:hover {
-  color: #C2410C;
+  color: #d63e17;
   text-decoration: underline;
 }
 
@@ -425,7 +425,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #C2410C;
+  background-color: #d63e17;
   text-decoration: none;
   transform: translateY(-2px);
 }

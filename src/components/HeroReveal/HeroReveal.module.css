@@ -193,8 +193,8 @@
   white-space: nowrap;
 }
 .ctaButton:hover {
-  background-color: #C2410C;
-  border-color: #C2410C;
+  background-color: #d63e17;
+  border-color: #d63e17;
   text-decoration: none;
   transform: translateY(-2px);
   cursor: pointer;

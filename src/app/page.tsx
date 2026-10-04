@@ -63,7 +63,6 @@ export default function Home() {
               { name: "Villas & independent homes", link: "/services" },
               { name: "Commercial buildings", link: "/services" },
               { name: "PEB & industrial structures", link: "/services" },
-              { name: "Architecture & structural design", link: "/services" },
               { name: "Interiors & renovation", link: "/services" },
               { name: "Project management", link: "/services" },
             ].map((service) => (

@@ -3,15 +3,14 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 const projects = [
-  { id: 1, name: "Luxury Villa", location: "Kokapet, Hyderabad", type: "Villa", area: "6,200 sq ft", year: 2025, category: "Villas", bg: "#1a3a4a" },
-  { id: 2, name: "Commercial Complex", location: "Banjara Hills, Hyderabad", type: "Commercial", area: "12,000 sq ft", year: 2024, category: "Commercial", bg: "#2a2a4a" },
-  { id: 3, name: "Modern Residence", location: "Jubilee Hills, Hyderabad", type: "Residential", area: "4,500 sq ft", year: 2024, category: "Residential", bg: "#1e3545" },
-  { id: 4, name: "Industrial Warehouse", location: "Patancheru, Hyderabad", type: "Steel Building", area: "25,000 sq ft", year: 2023, category: "Industrial", bg: "#1a2a1a" },
-  { id: 5, name: "Luxury Apartment Complex", location: "Gachibowli, Hyderabad", type: "Residential", area: "38,000 sq ft", year: 2023, category: "Residential", bg: "#3a2a1a" },
-  { id: 6, name: "Corporate Office", location: "Hitec City, Hyderabad", type: "Commercial", area: "8,500 sq ft", year: 2024, category: "Commercial", bg: "#1a1a3a" },
+  { id: 1, location: "Chikkadpally", floors: "G+3", type: "", category: "Residential", bg: "#1a3a4a" },
+  { id: 2, location: "Champapet", floors: "G+2", type: "", category: "Residential", bg: "#2a2a4a" },
+  { id: 3, location: "Erragadda", floors: "S+4", type: "", category: "Residential", bg: "#1e3545" },
+  { id: 4, location: "Nagole, Samathapuri Colony", floors: "S+4", type: "Commercial", category: "Commercial", bg: "#1a2a1a" },
+  { id: 5, location: "Nagole, Snehapuri Colony", floors: "S+3", type: "Semi-commercial", category: "Commercial", bg: "#3a2a1a" },
 ];
 
-const filters = ["All", "Villas", "Residential", "Commercial", "Industrial", "Interiors"];
+const filters = ["All", "Residential", "Commercial"];
 
 export default async function ProjectsPage({
   searchParams,
@@ -71,9 +70,9 @@ export default async function ProjectsPage({
                   </div>
                 </div>
                 <div className={styles.cardInfo}>
-                  <h3>{project.name}</h3>
+                  <h3>{project.location}</h3>
                   <p>
-                    {project.location} · {project.area} · {project.year}
+                    {project.floors} {project.type ? `· ${project.type}` : ""}
                   </p>
                 </div>
               </Link>

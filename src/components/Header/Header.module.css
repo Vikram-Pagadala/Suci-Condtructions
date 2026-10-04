@@ -7,14 +7,14 @@
   left: 0;
   width: 100%;
   z-index: 200;
-  padding: var(--space-24) 0;
+  padding: var(--space-32) 0;
   transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
   color: var(--color-pure-white);
 }
 
 .header.scrolled {
   background-color: var(--color-deccan-slate);
-  padding: var(--space-16) 0;
+  padding: var(--space-24) 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
 
@@ -77,7 +77,7 @@
 
 .nav a {
   color: inherit;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.3px;
 }
@@ -98,7 +98,7 @@
   border: none;
   color: inherit;
   font-family: inherit;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   padding: 0;
@@ -368,13 +368,20 @@
 }
 
 .mobilePhone {
-  color: rgba(255,255,255,0.75);
+  display: inline-block;
+  color: rgba(255,255,255,0.85);
   font-size: 18px;
   font-weight: var(--font-weight-medium);
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .mobilePhone:hover {
   color: var(--color-pure-white);
+  background-color: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.35);
   text-decoration: none;
 }
 
@@ -383,7 +390,7 @@
   background-color: var(--color-aged-brass);
   color: var(--color-pure-white);
   padding: 16px 32px;
-  border-radius: 2px;
+  border-radius: 999px;
   font-size: 16px;
   font-weight: var(--font-weight-semibold);
   transition: background-color 0.2s ease;

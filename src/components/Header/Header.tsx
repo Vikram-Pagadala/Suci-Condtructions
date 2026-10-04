@@ -44,6 +44,7 @@ export default function Header() {
               </div>
             </div>
             <Link href="/projects">Projects</Link>
+            <Link href="/pricing">Pricing</Link>
             <Link href="/contact">Contact</Link>
           </nav>
 
@@ -85,6 +86,7 @@ export default function Header() {
             <Link href="/about" onClick={closeMenu}>About</Link>
             <Link href="/services" onClick={closeMenu}>Services</Link>
             <Link href="/projects" onClick={closeMenu}>Projects</Link>
+            <Link href="/pricing" onClick={closeMenu}>Pricing</Link>
             <Link href="/contact" onClick={closeMenu}>Contact</Link>
           </nav>
           <div className={styles.mobileActions}>

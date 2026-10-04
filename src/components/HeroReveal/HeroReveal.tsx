@@ -149,11 +149,9 @@ export default function HeroReveal() {
         "--mask-edge": isShowingStructure ? "transparent" : "black"
       } as React.CSSProperties}
     >
-      {/* Bottom layer: blueprint */}
+      {/* Bottom layer: blueprint / RCC structure */}
       <picture className={`${styles.layer} ${styles.layerStructure}`}>
-        <source media="(max-width: 768px)" srcSet="/assets/images/hero/building-structure-mobile.webp" />
-        <source srcSet="/assets/images/hero/building-structure.webp" type="image/webp" />
-        <img src="/assets/images/hero/building-structure.jpg" alt="Steel structure engineering drawing" draggable={false} />
+        <img src="/assets/images/hero/rcc-placeholder.jpg" alt="[PLACEHOLDER] RCC structure image needed" draggable={false} />
       </picture>
 
       {/* Top layer: finished building (masked) */}

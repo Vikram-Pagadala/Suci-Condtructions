@@ -216,6 +216,7 @@ export default function PricingTable() {
             const catItems = pricingDifferences.filter(d => d.category === cat);
             // Quick summaries for collapsed state
             const getSummary = (pId: string) => {
+              if (cat === "Structure") return pId === "basic" ? "Shree Steel, Zuari Cement" : pId === "value-added" ? "Vizag Steel, Zuari Cement" : "Vizag Steel, Ultratech Cement";
               if (cat === "Doors & Windows") return pId === "basic" ? "Aluminium · 2 track" : pId === "value-added" ? "UPVC + mesh · 2.5 track" : "UPVC + mesh · 3 track";
               if (cat === "Kitchen") return pId === "basic" ? "SS Sink" : pId === "elite" ? "Granite Sink + Premium" : "SS Sink + Accessories";
               if (cat === "Bathroom") return pId === "basic" ? "Basic CP Fittings" : pId === "elite" ? "Kohler + Solar" : "Premium CP + Accessories";

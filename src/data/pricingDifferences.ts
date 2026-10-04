@@ -14,6 +14,10 @@ export interface PricingDifference {
 }
 
 export const pricingDifferences: PricingDifference[] = [
+  { category: "Structure", line: "Steel", basic: "Vizag / JSW Neo", valueAdded: "Vizag / JSW Neo", premium: "Vizag / JSW Neo", elite: "Vizag / JSW Neo" },
+  { category: "Structure", line: "Cement", basic: "Ultratech / Ramco", valueAdded: "Ultratech / Ramco", premium: "Ultratech / Ramco", elite: "Ultratech / Ramco" },
+  { category: "Structure", line: "RCC design mix", basic: "M20 / M25", valueAdded: "M20 / M25", premium: "M20 / M25", elite: "M20 / M25" },
+  { category: "Structure", line: "Ceiling height", basic: "10 ft", valueAdded: "10 ft", premium: "10 ft", elite: "10 ft" },
   { category: "Kitchen", line: "Kitchen wall dado (per sq ft)", basic: "₹50", valueAdded: "₹65", premium: "₹80", elite: "₹90" },
   { category: "Kitchen", line: "Main sink faucet", basic: "₹1,500", valueAdded: "₹2,200", premium: "₹2,800", elite: "₹3,500" },
   { category: "Kitchen", line: "Kitchen sink", basic: "SS ₹3,500", valueAdded: "SS ₹5,000", premium: "SS/Granite ₹6,500", elite: "SS/Granite ₹8,000" },

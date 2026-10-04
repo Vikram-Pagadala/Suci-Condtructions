@@ -211,10 +211,6 @@ export default function PricingTable() {
         </div>
 
         <div className={styles.tableBody}>
-          {/* Trust strip as a full-width row inside the table */}
-          <div className={styles.trustStripRow}>
-            <strong>Structure (Same in all plans):</strong> Every plan gets the same engineering: Vizag / JSW Neo steel, Ultratech / Ramco cement, M20/M25 design mix, 10 ft ceilings.
-          </div>
           {categories.map(cat => {
             const isOpen = openCategories[cat];
             const catItems = pricingDifferences.filter(d => d.category === cat);
@@ -297,7 +293,7 @@ export default function PricingTable() {
       {/* 6. CTA */}
       <div className={styles.ctaBand}>
         <h2>Ready to get started?</h2>
-        <p>Book a free consultation and our engineer will discuss the best package for your needs.</p>
+        <p style={{ textAlign: "center" }}>Book a free consultation and our engineer will discuss the best package for your needs.</p>
         <Link href={`/contact?plan=${recommendedPlan.name}`} className={styles.ctaButton}>
           Book a consultation
         </Link>

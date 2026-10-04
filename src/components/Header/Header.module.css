@@ -242,7 +242,7 @@
   display: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 768px) {
   .phone span:last-child {
     display: inline;
   }

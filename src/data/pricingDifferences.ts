@@ -5,44 +5,335 @@ export interface PricingDifference {
   valueAdded: string;
   premium: string;
   elite: string;
-  thumbs?: {
-    basic?: string;
-    valueAdded?: string;
-    premium?: string;
-    elite?: string;
-  };
 }
 
 export const pricingDifferences: PricingDifference[] = [
-  { category: "Structure", line: "Steel", basic: "Shree | Radha", valueAdded: "Vizag | JSW Neo", premium: "Vizag | JSW Neo", elite: "Vizag | JSW Neo", thumbs: { basic: "steel.svg", valueAdded: "steel.svg" } },
-  { category: "Structure", line: "Cement", basic: "Zuari | Maha of 43 or 53 grade", valueAdded: "Zuari | Maha of 43 or 53 grade", premium: "Ultratech | Ramco Supercrete of 43 or 53 grade", elite: "Ultratech | Ramco Supercrete of 43 or 53 grade", thumbs: { basic: "cement.svg", premium: "cement.svg" } },
-  { category: "Structure", line: "Aggregates", basic: "20mm & 40mm", valueAdded: "20mm & 40mm", premium: "20mm & 40mm", elite: "20mm & 40mm", thumbs: { basic: "aggregates.svg" } },
-  { category: "Structure", line: "Blocks", basic: "Standard Red Bricks. 9 inch & 4 inch", valueAdded: "Standard Red Bricks. 9 inch & 4 inch", premium: "Standard Red Bricks. 9 inch & 4 inch", elite: "Standard Red Bricks. 9 inch & 4 inch", thumbs: { basic: "blocks.svg" } },
-  { category: "Structure", line: "RCC design mix", basic: "M20 / M25 or As per the structural designer recommendation", valueAdded: "M20 / M25 or As per the structural designer recommendation", premium: "ACC or Ultratech M20 / M25 or As per the structural designer recommendation", elite: "ACC or Ultratech M20 / M25 or As per the structural designer recommendation", thumbs: { basic: "rcc.svg", premium: "rcc.svg" } },
-  { category: "Structure", line: "Ceiling height", basic: "10 feet (Finished Floor level to Finished Floor level)", valueAdded: "10 feet (Finished Floor level to Finished Floor level)", premium: "10 feet (Finished Floor level to Finished Floor level)", elite: "10 feet (Finished Floor level to Finished Floor level)", thumbs: { basic: "ceiling.svg" } },
-  { category: "Kitchen", line: "Kitchen wall dado (per sq ft)", basic: "₹50", valueAdded: "₹65", premium: "₹80", elite: "₹90" },
-  { category: "Kitchen", line: "Main sink faucet", basic: "₹1,500", valueAdded: "₹2,200", premium: "₹2,800", elite: "₹3,500" },
-  { category: "Kitchen", line: "Kitchen sink", basic: "SS ₹3,500", valueAdded: "SS ₹5,000", premium: "SS/Granite ₹6,500", elite: "SS/Granite ₹8,000" },
-  { category: "Bathroom", line: "Bathroom wall dado (per sq ft)", basic: "₹50", valueAdded: "₹65", premium: "₹80", elite: "₹90" },
-  { category: "Bathroom", line: "Sanitaryware & CP per 1,000 sq ft", basic: "₹30,000", valueAdded: "₹50,000", premium: "₹70,000", elite: "₹80,000", thumbs: { basic: "bath-1.svg", premium: "bath-2.svg" } },
-  { category: "Bathroom", line: "Bathroom accessories", basic: "—", valueAdded: "₹5,000", premium: "₹7,000", elite: "₹9,000" },
-  { category: "Bathroom", line: "Solar water heater provision", basic: "—", valueAdded: "—", premium: "Yes", elite: "Yes", thumbs: { premium: "solar-provision.svg" } },
-  { category: "Doors & Windows", line: "Windows", basic: "Aluminium 2 track", valueAdded: "UPVC + mesh 2.5 track", premium: "UPVC + mesh 3 track", elite: "UPVC + mesh 3 track", thumbs: { basic: "windows-al.svg", valueAdded: "windows-upvc.svg" } },
-  { category: "Doors & Windows", line: "Main teak door", basic: "₹25,000", valueAdded: "₹32,000", premium: "₹40,000", elite: "₹50,000" },
-  { category: "Doors & Windows", line: "Internal doors", basic: "₹8,000", valueAdded: "₹10,000", premium: "₹12,000", elite: "₹13,000" },
-  { category: "Doors & Windows", line: "Pooja room door", basic: "—", valueAdded: "₹27,000", premium: "₹31,000", elite: "₹35,000" },
-  { category: "Painting", line: "Interior paint", basic: "Tractor Emulsion", valueAdded: "Premium Emulsion", premium: "Apcolite Premium", elite: "Royale Luxury", thumbs: { basic: "paint-1.svg", valueAdded: "paint-2.svg", premium: "paint-3.svg", elite: "paint-4.svg" } },
-  { category: "Painting", line: "Exterior paint", basic: "Ace", valueAdded: "Apex", premium: "Apex", elite: "Apex Ultima" },
-  { category: "Flooring", line: "Flooring: living & dining (per sq ft)", basic: "₹70", valueAdded: "₹100", premium: "₹140", elite: "₹160", thumbs: { basic: "floor-1.svg", valueAdded: "floor-2.svg", premium: "floor-3.svg", elite: "floor-4.svg" } },
-  { category: "Flooring", line: "Flooring: rooms & kitchen", basic: "₹60", valueAdded: "₹90", premium: "₹120", elite: "₹140" },
-  { category: "Flooring", line: "Flooring: balcony & open areas", basic: "₹40", valueAdded: "₹60", premium: "₹80", elite: "₹90" },
-  { category: "Flooring", line: "Flooring: staircase granite", basic: "₹90", valueAdded: "₹100", premium: "₹110", elite: "₹140" },
-  { category: "Flooring", line: "Flooring: parking", basic: "₹50", valueAdded: "₹60", premium: "₹70", elite: "₹70" },
-  { category: "Electrical", line: "Switches & sockets", basic: "Legrand Allzy range", valueAdded: "Legrand Allzy range", premium: "Legrand Mylinc range", elite: "Schneider Unica Pure range" },
-  { category: "Electrical", line: "UPS wiring provision", basic: "—", valueAdded: "—", premium: "Yes", elite: "Yes" },
-  { category: "Electrical", line: "EV charging point", basic: "—", valueAdded: "—", premium: "—", elite: "Yes", thumbs: { elite: "ev-charger.svg" } },
-  { category: "Miscellaneous", line: "Overhead tank", basic: "1,000 L", valueAdded: "1,500 L", premium: "2,000 L", elite: "2,000 L" },
-  { category: "Miscellaneous", line: "Underground sump", basic: "4,000 L", valueAdded: "6,000 L", premium: "7,000 L", elite: "8,000 L" },
-  { category: "Miscellaneous", line: "Staircase railing", basic: "MS", valueAdded: "MS", premium: "Stainless steel", elite: "Stainless steel + glass", thumbs: { basic: "railing-ms.svg", premium: "railing-ss.svg", elite: "railing-glass.svg" } },
-  { category: "Miscellaneous", line: "Copper gas connection", basic: "—", valueAdded: "—", premium: "—", elite: "Yes", thumbs: { elite: "gas-line.svg" } }
+  {
+    "category": "Structure",
+    "line": "Steel",
+    "basic": "Shree | Radha",
+    "valueAdded": "Vizag | JSW Neo",
+    "premium": "Vizag | JSW Neo",
+    "elite": "Vizag | JSW Neo"
+  },
+  {
+    "category": "Structure",
+    "line": "Cement",
+    "basic": "Zuari | Maha of 43 or 53 grade",
+    "valueAdded": "Zuari | Maha of 43 or 53 grade",
+    "premium": "Ultratech | Ramco Supercrete of 43 or 53 grade",
+    "elite": "Ultratech | Ramco Supercrete of 43 or 53 grade"
+  },
+  {
+    "category": "Structure",
+    "line": "Aggregates",
+    "basic": "20mm & 40mm",
+    "valueAdded": "20mm & 40mm",
+    "premium": "20mm & 40mm",
+    "elite": "20mm & 40mm"
+  },
+  {
+    "category": "Structure",
+    "line": "Blocks",
+    "basic": "Standard Red Bricks. 9 inch & 4 inch",
+    "valueAdded": "Standard Red Bricks. 9 inch & 4 inch",
+    "premium": "Standard Red Bricks. 9 inch & 4 inch",
+    "elite": "Standard Red Bricks. 9 inch & 4 inch"
+  },
+  {
+    "category": "Structure",
+    "line": "RCC Design Mix",
+    "basic": "M20 / M25 or As per the structural designer recommendation",
+    "valueAdded": "M20 / M25 or As per the structural designer recommendation",
+    "premium": "ACC or Ultratech M20 / M25 or As per the structural designer recommendation",
+    "elite": "ACC or Ultratech M20 / M25 or As per the structural designer recommendation"
+  },
+  {
+    "category": "Structure",
+    "line": "Ceiling Height",
+    "basic": "10 feet (Finished Floor level to Finished Floor level)",
+    "valueAdded": "10 feet (Finished Floor level to Finished Floor level)",
+    "premium": "10 feet (Finished Floor level to Finished Floor level)",
+    "elite": "10 feet (Finished Floor level to Finished Floor level)"
+  },
+  {
+    "category": "Kitchen",
+    "line": "Ceramic Wall Dado",
+    "basic": "Upto Rs.40 per Sqft",
+    "valueAdded": "Upto Rs.60 per Sqft",
+    "premium": "Upto Rs.80 per Sqft",
+    "elite": "Upto Rs.90 per Sqft"
+  },
+  {
+    "category": "Kitchen",
+    "line": "Main Sink Faucet",
+    "basic": "Upto Rs.1300",
+    "valueAdded": "Upto Rs.2000",
+    "premium": "Upto Rs.3500",
+    "elite": "Upto Rs.3500"
+  },
+  {
+    "category": "Kitchen",
+    "line": "Any other Faucet or Accessories",
+    "basic": "ISI Marked",
+    "valueAdded": "ISI Marked",
+    "premium": "Parryware / Hindware / Jaquar",
+    "elite": "Parryware / Hindware / Jaquar"
+  },
+  {
+    "category": "Kitchen",
+    "line": "Kitchen Sink",
+    "basic": "Stainless Steel of Single Sink make worth Rs. 3,000",
+    "valueAdded": "Stainless Steel of Single Sink make worth Rs. 6,000",
+    "premium": "—",
+    "elite": "—"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Ceramic Wall Dado upto 7' height",
+    "basic": "Upto Rs.40 per Sqft",
+    "valueAdded": "Upto Rs.60 per Sqft",
+    "premium": "Upto Rs.80 per Sqft",
+    "elite": "Upto Rs.90 per Sqft"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Sanitarywares & CP fittings upto Rs. 30,000 per 1000 Sqft of Hindware make",
+    "basic": "Yes",
+    "valueAdded": "—",
+    "premium": "—",
+    "elite": "—"
+  },
+  {
+    "category": "Bathroom",
+    "line": "CPVC Pipe",
+    "basic": "Apollo | Astral",
+    "valueAdded": "Apollo | Astral",
+    "premium": "Apollo | Astral",
+    "elite": "Apollo | Astral"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Bathroom doors",
+    "basic": "Waterproof flush doors or WPC",
+    "valueAdded": "Waterproof flush doors or WPC",
+    "premium": "Waterproof flush doors or WPC",
+    "elite": "Waterproof flush doors or WPC"
+  },
+  {
+    "category": "Doors & Windows",
+    "line": "Windows",
+    "basic": "Aluminium Windows with glass shutters and mesh shutters (3 track with 1 mesh) of Jindal Profiles",
+    "valueAdded": "UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of Atlas | Green fourtune | Greentech",
+    "premium": "UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of NCL Veka | Prominance | V-tech",
+    "elite": "UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of NCL Veka | Wintech | Karthik UPVC | Simta Astrix"
+  },
+  {
+    "category": "Doors & Windows",
+    "line": "Main Door",
+    "basic": "Flush Door with Veneer. Sal wood frame of 5 inch by 3 inch, worth Rs.20,000 including fixtures.",
+    "valueAdded": "Teak Door With Teak frame of 5 inch by 3 inch, worth Rs.30,000 including fixtures.",
+    "premium": "Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.40,000 including fixtures.",
+    "elite": "Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.50,000 including fixtures."
+  },
+  {
+    "category": "Doors & Windows",
+    "line": "Internal Doors",
+    "basic": "Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.",
+    "valueAdded": "Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch.",
+    "premium": "Membrane doors / Flush Door with Laminates upto upto Rs.12,000 including fixtures. Door Frames of Sal Wood 4 inch by 3 inch.",
+    "elite": "Membrane doors / Flush Door with Laminates upto Rs.13,000 including fixtures. Door Frames of Sal Wood 4 inch by 3 inch."
+  },
+  {
+    "category": "Painting",
+    "line": "Interior Painting",
+    "basic": "JK Putty + Tractor Emulsion or equivalent",
+    "valueAdded": "JK Putty + Tractor Shyne Emulsion",
+    "premium": "JK Putty + Apcolite Premium Emulsion",
+    "elite": "JK Putty + Royale Luxury Emulsion"
+  },
+  {
+    "category": "Painting",
+    "line": "Exterior Painting",
+    "basic": "Asian Primer + Ace Exterior emulsion Paint or equivalent",
+    "valueAdded": "Asian Primer + Apex Exterior Emulsion Paint",
+    "premium": "Asian Primer + Apex Exterior Emulsion Paint",
+    "elite": "Asian Primer + Apex Ultima Exterior Emulsion Paint"
+  },
+  {
+    "category": "Flooring",
+    "line": "Living & Dining Flooring",
+    "basic": "Tiles of value upto Rs.50 per sqft",
+    "valueAdded": "Tiles or Granite of value upto Rs.100 per sqft",
+    "premium": "Tiles or Granite of value upto Rs.140 per sqft",
+    "elite": "Tiles or Granite of value upto Rs.160 per sqft"
+  },
+  {
+    "category": "Flooring",
+    "line": "Rooms & Kitchen Flooring",
+    "basic": "Tiles of value upto Rs.50 per sqft",
+    "valueAdded": "Tiles of value upto Rs.80 per sqft",
+    "premium": "Tiles or Granite  of value upto Rs.120 per sqft",
+    "elite": "Tiles or Granite of value upto Rs.140 per sqft"
+  },
+  {
+    "category": "Flooring",
+    "line": "Balcony and Open Areas Flooring",
+    "basic": "Anti-skid tiles of value upto Rs.40 per sqft",
+    "valueAdded": "Anti-skid tiles of value upto Rs.60 per sqft",
+    "premium": "Anti-skid tiles of value upto Rs.80 per sqft",
+    "elite": "Anti-skid tiles of value upto Rs.90 per sqft"
+  },
+  {
+    "category": "Flooring",
+    "line": "Staircase Flooring",
+    "basic": "Sadarahalli Granite of value upto ₹ 70 per sqft",
+    "valueAdded": "Sadarahalli Granite of value upto ₹ 80 per sqft",
+    "premium": "Sadarahalli Granite of value upto ₹ 110 per sqft",
+    "elite": "Sadarahalli Granite of value upto ₹ 140 per sqft"
+  },
+  {
+    "category": "Flooring",
+    "line": "Parking Tiles",
+    "basic": "Anti-skid tiles of value upto ₹ 40 per sqft",
+    "valueAdded": "Anti-skid tiles of value upto ₹ 50 per sqft",
+    "premium": "Anti-skid tiles of value upto ₹ 70 per sqft",
+    "elite": "Anti-skid tiles of value upto ₹ 70 per sqft"
+  },
+  {
+    "category": "Electrical",
+    "line": "All wiring shall be done with fire proof wires of Finolex | Anchor | Havells",
+    "basic": "Yes",
+    "valueAdded": "Yes",
+    "premium": "Yes",
+    "elite": "Yes"
+  },
+  {
+    "category": "Electrical",
+    "line": "Switches & Sockets",
+    "basic": "Legrand Allzy | GM(G9) | HI-FI | Great white",
+    "valueAdded": "Roma | Lisha | Legrand lyncus | Havells Fabio",
+    "premium": "Legrand mylinc | Havells Coral | Roma",
+    "elite": "Schneider unica pure | legrand myrius | Jaquar"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "Overhead Tank",
+    "basic": "Double Layered tank of 1000 Ltrs of Duratank make",
+    "valueAdded": "Double Layered tank of 1500 Ltrs of Duratank make",
+    "premium": "—",
+    "elite": "—"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "Underground Sump",
+    "basic": "4000 Ltrs",
+    "valueAdded": "6000 Ltrs",
+    "premium": "7000 Ltrs",
+    "elite": "8000 Ltrs"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "Staircase Railing",
+    "basic": "MS Railing",
+    "valueAdded": "MS Railing",
+    "premium": "SS (Stainless) Railing of SS 304 grade profiles",
+    "elite": "SS (Stainless) Glass Railing of SS 304 grade profiles"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "Window Grills",
+    "basic": "Basic MS Grill with enamel Paint at Rs. 180 per Sqft",
+    "valueAdded": "Basic MS Grill with enamel Paint at Rs. 180 per Sqft",
+    "premium": "Basic MS Grill with enamel Paint at Rs. 180 per Sqft",
+    "elite": "Basic MS Grill with enamel Paint at Rs. 180 per Sqft"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Sanitarywares & CP fittings upto Rs. 50,000 per 1000 Sqft of Parryware make",
+    "basic": "—",
+    "valueAdded": "Yes",
+    "premium": "—",
+    "elite": "—"
+  },
+  {
+    "category": "Electrical",
+    "line": "UPS Wiring Provision",
+    "basic": "—",
+    "valueAdded": "Yes",
+    "premium": "Yes",
+    "elite": "Yes"
+  },
+  {
+    "category": "Kitchen",
+    "line": "Kitchen Sink of Stainless Steel or granite Finish worth Rs. 8,000 (Futura, Carysil)",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "Yes",
+    "elite": "Yes"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Sanitarywares & CP fittings upto Rs. 70,000 per 1000 Sqft of Jaquar make",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "Yes",
+    "elite": "—"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Mirror, Soap Dish, Towel Rail",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "Worth Rs. 7,000 till 1000 ft of Construction",
+    "elite": "Worth Rs. 9,000 till 1000 ft of Construction"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Solar water heater provision",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "Yes",
+    "elite": "Yes"
+  },
+  {
+    "category": "Doors & Windows",
+    "line": "1 Pooja Room Door",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 31,000 for every 2,000 sft package area",
+    "elite": "Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 35,000 for every 2,000 sft package area"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "A Sintex /Apollo Double layered overhead tank of",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications",
+    "elite": "2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications"
+  },
+  {
+    "category": "Bathroom",
+    "line": "Sanitarywares & CP fittings upto Rs. 80,000 per 1000 Sqft of Kohler make",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "—",
+    "elite": "Yes"
+  },
+  {
+    "category": "Electrical",
+    "line": "1 EV Charging Point at Ground floor",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "—",
+    "elite": "Yes"
+  },
+  {
+    "category": "Miscellaneous",
+    "line": "1 Copper gas connection for every dwelling unit of 1,500 sft package area",
+    "basic": "—",
+    "valueAdded": "—",
+    "premium": "—",
+    "elite": "Yes"
+  }
 ];

@@ -13,14 +13,14 @@ export interface Package {
 
 export const packages: Package[] = [
   {
-    id: "basic",
-    name: "Basic",
-    pricePerSqft: 2090,
-    priceNote: "incl. GST",
-    categories: [
+    "id": "basic",
+    "name": "Basic",
+    "pricePerSqft": 2090,
+    "priceNote": "incl. GST",
+    "categories": [
       {
-        title: "Structure",
-        items: [
+        "title": "Structure",
+        "items": [
           "Steel - Shree | Radha",
           "Cement - Zuari | Maha of 43 or 53 grade",
           "Aggregates - 20mm & 40mm",
@@ -30,77 +30,77 @@ export const packages: Package[] = [
         ]
       },
       {
-        title: "Kitchen",
-        items: [
-          "Ceramic Wall Dado: Up to ₹50 / sq.ft.",
-          "Main Sink Faucet: Up to ₹1,500",
-          "Faucets & Accessories: Parryware | Hindware | Jaquar",
-          "Kitchen Sink: Stainless Steel worth ₹3,500"
+        "title": "Kitchen",
+        "items": [
+          "Ceramic Wall Dado - Upto Rs.40 per Sqft",
+          "Main Sink Faucet - Upto Rs.1300",
+          "Any other Faucet or Accessories - ISI Marked",
+          "Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 3,000"
         ]
       },
       {
-        title: "Bathroom",
-        items: [
-          "Ceramic Wall Dado: Up to 7' height (Up to ₹50 / sq.ft.)",
-          "Sanitaryware & CP Fittings: Up to ₹30,000 per 1,000 sq.ft. (Cera / Parryware)",
-          "CPVC Pipes: Apollo | Astral",
-          "Bathroom Doors: Waterproof flush doors or WPC"
+        "title": "Bathroom",
+        "items": [
+          "Ceramic Wall Dado upto 7' height - Upto Rs.40 per Sqft",
+          "Sanitarywares & CP fittings upto Rs. 30,000 per 1000 Sqft of Hindware make",
+          "CPVC Pipe - Apollo | Astral",
+          "Bathroom doors - Waterproof flush doors or WPC"
         ]
       },
       {
-        title: "Doors & Windows",
-        items: [
-          "Windows: Aluminum Windows with glass shutters (2 track)",
-          "Main Door: Teak Door with Teak frame (5\" x 3.5\"), worth ₹25,000 including fixtures",
-          "Internal Doors: Membrane doors / Flush Door with Laminates up to ₹8,000 including fixtures (Sal Wood frame 4\" x 3\")"
+        "title": "Doors & Windows",
+        "items": [
+          "Windows - Aluminium Windows with glass shutters and mesh shutters (3 track with 1 mesh) of Jindal Profiles",
+          "Main Door - Flush Door with Veneer. Sal wood frame of 5 inch by 3 inch, worth Rs.20,000 including fixtures.",
+          "Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch."
         ]
       },
       {
-        title: "Painting",
-        items: [
-          "Interior: JK Putty + Tractor Emulsion",
-          "Exterior: Asian Primer + Ace Exterior Emulsion Paint"
+        "title": "Painting",
+        "items": [
+          "Interior Painting - JK Putty + Tractor Emulsion or equivalent",
+          "Exterior Painting - Asian Primer + Ace Exterior emulsion Paint or equivalent"
         ]
       },
       {
-        title: "Flooring",
-        items: [
-          "Living & Dining: Tiles / Granite up to ₹70 / sq.ft.",
-          "Rooms & Kitchen: Tiles / Granite up to ₹60 / sq.ft.",
-          "Balcony & Open Areas: Anti-skid tiles up to ₹40 / sq.ft.",
-          "Staircase: Sadarahalli Granite up to ₹90 / sq.ft.",
-          "Parking: Anti-skid tiles up to ₹50 / sq.ft."
+        "title": "Flooring",
+        "items": [
+          "Living & Dining Flooring - Tiles of value upto Rs.50 per sqft",
+          "Rooms & Kitchen Flooring - Tiles of value upto Rs.50 per sqft",
+          "Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.40 per sqft",
+          "Staircase Flooring - Sadarahalli Granite of value upto ₹ 70 per sqft",
+          "Parking Tiles - Anti-skid tiles of value upto ₹ 40 per sqft"
         ]
       },
       {
-        title: "Electrical",
-        items: [
-          "Wires: Fire-proof wires (Finolex | Anchor | Havells)",
-          "Switches & Sockets: Legrand Allzy | GM(G9) | HI-FI | Great White"
+        "title": "Electrical",
+        "items": [
+          "All wiring shall be done with fire proof wires of Finolex | Anchor | Havells",
+          "Switches & Sockets - Legrand Allzy | GM(G9) | HI-FI | Great white"
         ]
       },
       {
-        title: "Miscellaneous",
-        items: [
-          "Overhead Tank: Double-layered 1,000 Ltrs (Duratank)",
-          "Underground Sump: 4,000 Ltrs",
-          "Staircase Railing: MS Railing",
-          "Window Grills: Basic MS Grill with enamel paint at ₹180 / sq.ft."
+        "title": "Miscellaneous",
+        "items": [
+          "Overhead Tank - Double Layered tank of 1000 Ltrs of Duratank make",
+          "Underground Sump - 4000 Ltrs",
+          "Staircase Railing - MS Railing",
+          "Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft"
         ]
       }
     ]
   },
   {
-    id: "value-added",
-    name: "Value Added",
-    pricePerSqft: 2290,
-    priceNote: "incl. GST",
-    categories: [
+    "id": "value-added",
+    "name": "Value Added",
+    "pricePerSqft": 2290,
+    "priceNote": "incl. GST",
+    "categories": [
       {
-        title: "Structure",
-        items: [
-          "Steel - Vizag | JSW Neo",
-          "Cement - Zuari | Maha of 43 or 53 grade",
+        "title": "Structure",
+        "items": [
+          "Steel -Vizag | JSW Neo",
+          "Cement -Zuari | Maha of 43 or 53 grade",
           "Aggregates - 20mm & 40mm",
           "Blocks - Standard Red Bricks. 9 inch & 4 inch",
           "RCC Design Mix - M20 / M25 or As per the structural designer recommendation",
@@ -108,77 +108,76 @@ export const packages: Package[] = [
         ]
       },
       {
-        title: "Kitchen",
-        items: [
-          "Ceramic Wall Dado: Up to ₹65 / sq.ft.",
-          "Main Sink Faucet: Up to ₹2,200",
-          "Faucets & Accessories: Parryware | Hindware | Jaquar",
-          "Kitchen Sink: Stainless Steel worth ₹5,000 (Nirali, Futura)"
+        "title": "Kitchen",
+        "items": [
+          "Ceramic Wall Dado - Upto Rs.60 per Sqft",
+          "Main Sink Faucet - Upto Rs.2000",
+          "Any other Faucet or Accessories - ISI Marked",
+          "Kitchen Sink - Stainless Steel of Single Sink make worth Rs. 6,000"
         ]
       },
       {
-        title: "Bathroom",
-        items: [
-          "Ceramic Wall Dado: Up to 7' height (Up to ₹65 / sq.ft.)",
-          "Sanitaryware & CP Fittings: Up to ₹50,000 per 1,000 sq.ft. (Kohler / Jaquar / Cera)",
-          "CPVC Pipes: Apollo | Astral",
-          "Bathroom Doors: Waterproof flush doors or WPC",
-          "Accessories: Mirror, Soap Dish, Towel Rail worth ₹5,000 till 1,000 sq.ft. construction"
+        "title": "Bathroom",
+        "items": [
+          "Ceramic Wall Dado upto 7' height - Upto Rs.60 per Sqft",
+          "Sanitarywares & CP fittings upto Rs. 50,000 per 1000 Sqft of Parryware make",
+          "CPVC Pipe - Apollo | Astral",
+          "Bathroom doors - Waterproof flush doors or WPC"
         ]
       },
       {
-        title: "Doors & Windows",
-        items: [
-          "Windows: UPVC Windows with glass & mesh shutters (2.5 track with 1 mesh: NCL Veka | Prominance | V-tech)",
-          "Main Door: Teak Door with Teak frame (5\" x 3.5\"), worth ₹32,000 including fixtures",
-          "Internal Doors: Membrane / Flush Door with Laminates up to ₹10,000 (Sal Wood frame 4\" x 3\")",
-          "Pooja Room Door: 1 Burma Teak door with Teak frame (5\" x 2.5\"), worth ₹27,000 per 2,000 sq.ft."
+        "title": "Doors & Windows",
+        "items": [
+          "Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of Atlas | Green fourtune | Greentech",
+          "Main Door - Teak Door With Teak frame of 5 inch by 3 inch, worth Rs.30,000 including fixtures.",
+          "Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.9,000 including fixtures. Door Frames of Sal Wood 4 inch by 2.5 inch."
         ]
       },
       {
-        title: "Painting",
-        items: [
-          "Interior: JK Putty + Premium Emulsion",
-          "Exterior: Asian Primer + Apex Exterior Emulsion Paint"
+        "title": "Painting",
+        "items": [
+          "Interior Painting - JK Putty + Tractor Shyne Emulsion",
+          "Exterior Painting - Asian Primer + Apex Exterior Emulsion Paint"
         ]
       },
       {
-        title: "Flooring",
-        items: [
-          "Living & Dining: Tiles / Granite up to ₹100 / sq.ft.",
-          "Rooms & Kitchen: Tiles / Granite up to ₹90 / sq.ft.",
-          "Balcony & Open Areas: Anti-skid tiles up to ₹60 / sq.ft.",
-          "Staircase: Sadarahalli Granite up to ₹100 / sq.ft.",
-          "Parking: Anti-skid tiles up to ₹60 / sq.ft."
+        "title": "Flooring",
+        "items": [
+          "Living & Dining Flooring - Tiles or Granite of value upto Rs.100 per sqft",
+          "Rooms & Kitchen Flooring - Tiles of value upto Rs.80 per sqft",
+          "Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.60 per sqft",
+          "Staircase Flooring - Sadarahalli Granite of value upto ₹ 80 per sqft",
+          "Parking Tiles - Anti-skid tiles of value upto ₹ 50 per sqft"
         ]
       },
       {
-        title: "Electrical",
-        items: [
-          "Wires: Fire-proof wires (Finolex | Anchor | Havells)",
-          "Switches & Sockets: Legrand Allzy | GM(G9) | HI-FI | Great White"
+        "title": "Electrical",
+        "items": [
+          "All wiring shall be done with fire proof wires of Finolex | Anchor | Havells",
+          "Switches & Sockets - Roma | Lisha | Legrand lyncus | Havells Fabio",
+          "UPS Wiring Provision"
         ]
       },
       {
-        title: "Miscellaneous",
-        items: [
-          "Overhead Tank: Double-layered 1,500 Ltrs (Duratank)",
-          "Underground Sump: 6,000 Ltrs",
-          "Staircase Railing: MS Railing",
-          "Window Grills: Basic MS Grill with enamel paint at ₹180 / sq.ft."
+        "title": "Miscellaneous",
+        "items": [
+          "Overhead Tank - Double Layered tank of 1500 Ltrs of Duratank make",
+          "Underground Sump - 6000 Ltrs",
+          "Staircase Railing - MS Railing",
+          "Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft"
         ]
       }
     ]
   },
   {
-    id: "premium",
-    name: "Premium",
-    pricePerSqft: 2700,
-    priceNote: "incl. GST",
-    categories: [
+    "id": "premium",
+    "name": "Premium",
+    "pricePerSqft": 2700,
+    "priceNote": "incl. GST",
+    "categories": [
       {
-        title: "Structure",
-        items: [
+        "title": "Structure",
+        "items": [
           "Steel - Vizag | JSW Neo",
           "Cement - Ultratech | Ramco Supercrete of 43 or 53 grade",
           "Aggregates - 20mm & 40mm",
@@ -188,79 +187,79 @@ export const packages: Package[] = [
         ]
       },
       {
-        title: "Kitchen",
-        items: [
-          "Ceramic Wall Dado: Up to ₹80 / sq.ft.",
-          "Main Sink Faucet: Up to ₹2,800",
-          "Faucets & Accessories: Parryware | Hindware | Jaquar",
-          "Kitchen Sink: Stainless Steel or Granite Finish worth ₹6,500 (Futura, Carysil)"
+        "title": "Kitchen",
+        "items": [
+          "Ceramic Wall Dado - Upto Rs.80 per Sqft",
+          "Main Sink Faucet - Upto Rs.3500",
+          "Any other Faucet or Accessories - Parryware / Hindware / Jaquar",
+          "Kitchen Sink of Stainless Steel or granite Finish worth Rs. 8,000 (Futura, Carysil)"
         ]
       },
       {
-        title: "Bathroom",
-        items: [
-          "Ceramic Wall Dado: Up to 7' height (Up to ₹80 / sq.ft.)",
-          "Sanitaryware & CP Fittings: Up to ₹70,000 per 1,000 sq.ft. (Jaquar)",
-          "CPVC Pipes: Apollo | Astral",
-          "Bathroom Doors: Waterproof flush doors or WPC",
-          "Accessories: Mirror, Soap Dish, Towel Rail worth ₹7,000 till 1,000 sq.ft. construction",
-          "Solar Water Heater: Provision included"
+        "title": "Bathroom",
+        "items": [
+          "Ceramic Wall Dado upto 7' height - Upto Rs.80 per Sqft",
+          "Sanitarywares & CP fittings upto Rs. 70,000 per 1000 Sqft of Jaquar make",
+          "CPVC Pipe - Apollo | Astral",
+          "Bathroom doors - Waterproof flush doors or WPC",
+          "Mirror, Soap Dish, Towel Rail - Worth Rs. 7,000 till 1000 ft of Construction",
+          "Solar water heater provision"
         ]
       },
       {
-        title: "Doors & Windows",
-        items: [
-          "Windows: UPVC Windows with glass & mesh shutters (3 track with 1 mesh: NCL Veka | Prominance | V-tech)",
-          "Main Door: Teak Door with Teak frame (5\" x 3.5\"), worth ₹40,000 including fixtures",
-          "Internal Doors: Membrane / Flush Door with Laminates up to ₹12,000 (Sal Wood frame 4\" x 3\")",
-          "Pooja Room Door: 1 Burma Teak door with Teak frame (5\" x 2.5\"), worth ₹31,000 per 2,000 sq.ft."
+        "title": "Doors & Windows",
+        "items": [
+          "Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of NCL Veka | Prominance | V-tech",
+          "Main Door - Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.40,000 including fixtures.",
+          "Internal Doors - Membrane doors / Flush Door with Laminates upto upto Rs.12,000 including fixtures. Door Frames of Sal Wood 4 inch by 3 inch.",
+          "1 Pooja Room Door - Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 31,000 for every 2,000 sft package area"
         ]
       },
       {
-        title: "Painting",
-        items: [
-          "Interior: JK Putty + Apcolite Premium Emulsion",
-          "Exterior: Asian Primer + Apex Exterior Emulsion Paint"
+        "title": "Painting",
+        "items": [
+          "Interior Painting - JK Putty + Apcolite Premium Emulsion",
+          "Exterior Painting - Asian Primer + Apex Exterior Emulsion Paint"
         ]
       },
       {
-        title: "Flooring",
-        items: [
-          "Living & Dining: Tiles / Granite up to ₹140 / sq.ft.",
-          "Rooms & Kitchen: Tiles / Granite up to ₹120 / sq.ft.",
-          "Balcony & Open Areas: Anti-skid tiles up to ₹80 / sq.ft.",
-          "Staircase: Sadarahalli Granite up to ₹110 / sq.ft.",
-          "Parking: Anti-skid tiles up to ₹70 / sq.ft."
+        "title": "Flooring",
+        "items": [
+          "Living & Dining Flooring - Tiles or Granite of value upto Rs.140 per sqft",
+          "Rooms & Kitchen Flooring -Tiles or Granite  of value upto Rs.120 per sqft",
+          "Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.80 per sqft",
+          "Staircase Flooring - Sadarahalli Granite of value upto ₹ 110 per sqft",
+          "Parking Tiles - Anti-skid tiles of value upto ₹ 70 per sqft"
         ]
       },
       {
-        title: "Electrical",
-        items: [
-          "Wires: Fire-proof wires (Finolex | Anchor | Havells)",
-          "Switches & Sockets: Legrand Mylinc | Havells Coral | Roma",
-          "UPS: Wiring provision included"
+        "title": "Electrical",
+        "items": [
+          "All wiring shall be done with fire proof wires of Finolex | Anchor | Havells",
+          "Switches & Sockets - Legrand mylinc | Havells Coral | Roma",
+          "UPS Wiring Provision"
         ]
       },
       {
-        title: "Miscellaneous",
-        items: [
-          "Overhead Tank: Sintex / Apollo Double-layered 2,000 Ltrs (Additional capacity @ ₹9/L)",
-          "Underground Sump: 7,000 Ltrs",
-          "Staircase Railing: Stainless Steel (SS 304 grade profiles)",
-          "Window Grills: Basic MS Grill with enamel paint at ₹180 / sq.ft."
+        "title": "Miscellaneous",
+        "items": [
+          "A Sintex /Apollo Double layered overhead tank of - 2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications",
+          "Underground Sump - 7000 Ltrs",
+          "Staircase Railing - SS (Stainless) Railing of SS 304 grade profiles",
+          "Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft"
         ]
       }
     ]
   },
   {
-    id: "elite",
-    name: "Elite",
-    pricePerSqft: 2950,
-    priceNote: "incl. GST",
-    categories: [
+    "id": "elite",
+    "name": "Elite",
+    "pricePerSqft": 2950,
+    "priceNote": "incl. GST",
+    "categories": [
       {
-        title: "Structure",
-        items: [
+        "title": "Structure",
+        "items": [
           "Steel - Vizag | JSW Neo",
           "Cement - Ultratech | Ramco Supercrete of 43 or 53 grade",
           "Aggregates - 20mm & 40mm",
@@ -270,68 +269,68 @@ export const packages: Package[] = [
         ]
       },
       {
-        title: "Kitchen",
-        items: [
-          "Ceramic Wall Dado: Up to ₹90 / sq.ft.",
-          "Main Sink Faucet: Up to ₹3,500",
-          "Faucets & Accessories: Parryware | Hindware | Jaquar",
-          "Kitchen Sink: Stainless Steel or Granite Finish worth ₹8,000 (Futura, Carysil)"
+        "title": "Kitchen",
+        "items": [
+          "Ceramic Wall Dado - Upto Rs.90 per Sqft",
+          "Main Sink Faucet - Upto Rs.3500",
+          "Any other Faucet or Accessories - Parryware / Hindware / Jaquar",
+          "Kitchen Sink of Stainless Steel or granite Finish worth Rs. 8,000 (Futura, Carysil)"
         ]
       },
       {
-        title: "Bathroom",
-        items: [
-          "Ceramic Wall Dado: Up to 7' height (Up to ₹90 / sq.ft.)",
-          "Sanitaryware & CP Fittings: Up to ₹80,000 per 1,000 sq.ft. (Kohler)",
-          "CPVC Pipes: Apollo | Astral",
-          "Bathroom Doors: Waterproof flush doors or WPC",
-          "Accessories: Mirror, Soap Dish, Towel Rail worth ₹9,000 till 1,000 sq.ft. construction",
-          "Solar Water Heater: Provision included"
+        "title": "Bathroom",
+        "items": [
+          "Ceramic Wall Dado upto 7' height - Upto Rs.90 per Sqft",
+          "Sanitarywares & CP fittings upto Rs. 80,000 per 1000 Sqft of Kohler make",
+          "CPVC Pipe - Apollo | Astral",
+          "Bathroom doors - Waterproof flush doors or WPC",
+          "Mirror, Soap Dish, Towel Rail - Worth Rs. 9,000 till 1000 ft of Construction",
+          "Solar water heater provision"
         ]
       },
       {
-        title: "Doors & Windows",
-        items: [
-          "Windows: UPVC Windows with glass & mesh shutters (3 track with 1 mesh: NCL Veka | Wintech | Karthik UPVC | Simta Astrix)",
-          "Main Door: Teak Door with Teak frame (5\" x 3.5\"), worth ₹50,000 including fixtures",
-          "Internal Doors: Membrane / Flush Door with Laminates up to ₹13,000 (Sal Wood frame 4\" x 3\")",
-          "Pooja Room Door: 1 Burma Teak door with Teak frame (5\" x 2.5\"), worth ₹35,000 per 2,000 sq.ft."
+        "title": "Doors & Windows",
+        "items": [
+          "Windows - UPVC Windows with glass and mesh shutters (3 track with 1 mesh) of NCL Veka | Wintech | Karthik UPVC | Simta Astrix",
+          "Main Door - Teak Door With Teak frame of 5 inch by 3.5 inch, worth Rs.50,000 including fixtures.",
+          "Internal Doors - Membrane doors / Flush Door with Laminates upto Rs.13,000 including fixtures. Door Frames of Sal Wood 4 inch by 3 inch.",
+          "1 Pooja Room Door - Burma Teak along with Teak frame of 5inch by 2.5 inch, worth Rs. 35,000 for every 2,000 sft package area"
         ]
       },
       {
-        title: "Painting",
-        items: [
-          "Interior: JK Putty + Royale Luxury Emulsion",
-          "Exterior: Asian Primer + Apex Ultima Exterior Emulsion Paint"
+        "title": "Painting",
+        "items": [
+          "Interior Painting - JK Putty + Royale Luxury Emulsion",
+          "Exterior Painting - Asian Primer + Apex Ultima Exterior Emulsion Paint"
         ]
       },
       {
-        title: "Flooring",
-        items: [
-          "Living & Dining: Tiles / Granite up to ₹160 / sq.ft.",
-          "Rooms & Kitchen: Tiles / Granite up to ₹140 / sq.ft.",
-          "Balcony & Open Areas: Anti-skid tiles up to ₹90 / sq.ft.",
-          "Staircase: Sadarahalli Granite up to ₹140 / sq.ft.",
-          "Parking: Anti-skid tiles up to ₹70 / sq.ft."
+        "title": "Flooring",
+        "items": [
+          "Living & Dining Flooring - Tiles or Granite of value upto Rs.160 per sqft",
+          "Rooms & Kitchen Flooring -Tiles or Granite of value upto Rs.140 per sqft",
+          "Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.90 per sqft",
+          "Staircase Flooring - Sadarahalli Granite of value upto ₹ 140 per sqft",
+          "Parking Tiles - Anti-skid tiles of value upto ₹ 70 per sqft"
         ]
       },
       {
-        title: "Electrical",
-        items: [
-          "Wires: Fire-proof wires (Finolex | Anchor | Havells)",
-          "Switches & Sockets: Schneider Unica Pure | Legrand Myrius | Jaquar",
-          "UPS: Wiring provision included",
-          "EV Charger: 1 EV Charging Point at Ground Floor"
+        "title": "Electrical",
+        "items": [
+          "All wiring shall be done with fire proof wires of Finolex | Anchor | Havells",
+          "Switches & Sockets - Schneider unica pure | legrand myrius | Jaquar",
+          "UPS Wiring Provision",
+          "1 EV Charging Point at Ground floor"
         ]
       },
       {
-        title: "Miscellaneous",
-        items: [
-          "Overhead Tank: Sintex / Apollo Double-layered 2,000 Ltrs (Additional capacity @ ₹9/L)",
-          "Underground Sump: 8,000 Ltrs",
-          "Staircase Railing: Stainless Steel Glass Railing (SS 304 grade profiles)",
-          "Window Grills: Basic MS Grill with enamel paint at ₹180 / sq.ft.",
-          "Gas Connection: 1 Copper gas connection per dwelling unit (1,500 sq.ft. package area)"
+        "title": "Miscellaneous",
+        "items": [
+          "A Sintex /Apollo Double layered overhead tank of - 2000L shall be provided. Any Additional capacity shall be chargeable at INR 9 per L. Platform for the OHT shall be charged additional based on the design and specifications",
+          "Underground Sump - 8000 Ltrs",
+          "Staircase Railing - SS (Stainless) Glass Railing of SS 304 grade profiles",
+          "Window Grills - Basic MS Grill with enamel Paint at Rs. 180 per Sqft",
+          "1 Copper gas connection for every dwelling unit of 1,500 sft package area"
         ]
       }
     ]

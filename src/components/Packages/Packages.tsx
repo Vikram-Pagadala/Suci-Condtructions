@@ -38,7 +38,6 @@ export default function Packages() {
                 <p className={styles.bestFor}>Best for {planRecommendations[pkg.id].bestFor}.</p>
                 <ul>{planRecommendations[pkg.id].benefits.map(benefit => <li key={benefit}>{benefit}</li>)}</ul>
               </div>
-              <Link href={`/contact?plan=${encodeURIComponent(pkg.name)}`} className={styles.ctaButton}>Choose {pkg.name}</Link>
             </div>
           ))}
         </div>

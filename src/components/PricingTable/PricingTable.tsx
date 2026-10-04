@@ -41,7 +41,7 @@ export default function PricingTable() {
   const [buildingType, setBuildingType] = useState(buildingTypes[1]); // Default first home
   const [selectedChips, setSelectedChips] = useState<string[]>([]);
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({});
-  const [showOnlyDifferences, setShowOnlyDifferences] = useState(true);
+  const [showOnlyDifferences, setShowOnlyDifferences] = useState(false);
 
   // Recommendations
   const recommendedPlanIdx = useMemo(() => {

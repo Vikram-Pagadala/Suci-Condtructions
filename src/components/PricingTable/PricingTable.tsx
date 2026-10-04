@@ -250,18 +250,8 @@ export default function PricingTable() {
                           {plans.map((p) => {
                             const val = item[p.id === "value-added" ? "valueAdded" : p.id as keyof typeof item] as string;
                             const isDash = val === "—";
-                            const slug = item.line.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                            const thumbPath = `${slug}.svg`;
                             return (
                               <div key={p.id} data-plan={p.name} className={`${styles.colPlanCell} ${p.id === "value-added" ? styles.colRecommendedCell : ""}`}>
-                                {!isDash && (
-                                  <img 
-                                    src={`/assets/images/pricing/${thumbPath}`} 
-                                    alt={val} 
-                                    loading="lazy"
-                                    className={styles.thumbnailImg} 
-                                  />
-                                )}
                                 {isDash ? <span className={styles.mutedDash}>—</span> : <span>{val}</span>}
                               </div>
                             );

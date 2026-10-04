@@ -16,6 +16,8 @@ export interface PricingDifference {
 export const pricingDifferences: PricingDifference[] = [
   { category: "Structure", line: "Steel", basic: "Vizag / JSW Neo", valueAdded: "Vizag / JSW Neo", premium: "Vizag / JSW Neo", elite: "Vizag / JSW Neo" },
   { category: "Structure", line: "Cement", basic: "Ultratech / Ramco", valueAdded: "Ultratech / Ramco", premium: "Ultratech / Ramco", elite: "Ultratech / Ramco" },
+  { category: "Structure", line: "Aggregates", basic: "20mm & 40mm", valueAdded: "20mm & 40mm", premium: "20mm & 40mm", elite: "20mm & 40mm" },
+  { category: "Structure", line: "Blocks", basic: "Standard Red Bricks (9 inch & 4 inch)", valueAdded: "Standard Red Bricks (9 inch & 4 inch)", premium: "Standard Red Bricks (9 inch & 4 inch)", elite: "Standard Red Bricks (9 inch & 4 inch)" },
   { category: "Structure", line: "RCC design mix", basic: "M20 / M25", valueAdded: "M20 / M25", premium: "M20 / M25", elite: "M20 / M25" },
   { category: "Structure", line: "Ceiling height", basic: "10 ft", valueAdded: "10 ft", premium: "10 ft", elite: "10 ft" },
   { category: "Kitchen", line: "Kitchen wall dado (per sq ft)", basic: "₹50", valueAdded: "₹65", premium: "₹80", elite: "₹90" },

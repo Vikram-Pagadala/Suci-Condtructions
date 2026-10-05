@@ -1,15 +1,30 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
 import HeroReveal from '@/components/HeroReveal/HeroReveal';
 import Packages from '@/components/Packages/Packages';
 
+export const metadata: Metadata = {
+  title: "Top Construction Company in Hyderabad | Villa Builders | SUCI Constructions",
+  description: "SUCI Constructions is a leading structural engineer-led construction company in Hyderabad, Telangana. We specialize in villa, residential, and commercial construction.",
+  keywords: "construction company Hyderabad, villa builders Telangana, home construction Andhra Pradesh, structural engineers Hyderabad, residential construction company",
+  openGraph: {
+    title: "Top Construction Company in Hyderabad | SUCI Constructions",
+    description: "Engineer-led construction company in Telangana and Andhra Pradesh. We design and build villas, homes, and commercial spaces.",
+    url: "https://www.suciconstructions.com",
+    siteName: "SUCI Constructions",
+    locale: "en_IN",
+    type: "website",
+  }
+};
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "HomeAndConstructionBusiness",
     "name": "SUCI Constructions",
-    "url": "https://suci-constructions.vercel.app",
-    "logo": "https://suci-constructions.vercel.app/assets/logos/suci-logo.png",
+    "url": "https://www.suciconstructions.com",
+    "logo": "https://www.suciconstructions.com/assets/logos/suci-logo.png",
     "telephone": "+91 73868 58421",
     "email": "info@suciconstructions.com",
     "address": {

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About SUCI Constructions | Engineer-Led Builders in Hyderabad",
+  description: "Founded by structural engineers with 40+ years of experience. We build homes with engineering confidence in Telangana and Andhra Pradesh.",
+  keywords: "engineer led construction, structural engineers Hyderabad, SUCI founders, quality construction company Telangana",
+};
 
 export default function AboutPage() {
   return (

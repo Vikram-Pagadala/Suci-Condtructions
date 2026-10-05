@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Script from "next/script";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Contact SUCI Constructions | Book a Free Consultation in Hyderabad",
+  description: "Get in touch with SUCI Constructions for home, villa, or commercial building projects in Telangana and AP. Book a free consultation with our engineers.",
+  keywords: "contact construction company Hyderabad, book consultation builders Telangana, SUCI constructions contact, structural engineer consultation",
+};
 
 export default function ContactPage() {
   return (

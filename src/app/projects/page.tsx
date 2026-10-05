@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
 import ProjectImage from "./ProjectImage";
@@ -11,6 +12,12 @@ const projects = [
 ];
 
 const filters = ["All", "Residential", "Commercial"];
+
+export const metadata: Metadata = {
+  title: "Our Construction Projects | Villas & Commercial Buildings | SUCI",
+  description: "Explore our portfolio of completed and ongoing construction projects in Hyderabad, Telangana, and Andhra Pradesh.",
+  keywords: "construction projects Hyderabad, villa designs Telangana, commercial buildings AP, completed homes portfolio",
+};
 
 export default async function ProjectsPage({
   searchParams,

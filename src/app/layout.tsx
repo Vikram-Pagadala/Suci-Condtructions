@@ -19,6 +19,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "SUCI Constructions — Engineer-Led Construction Company in Telangana and Andhra Pradesh",
   description: "Structural engineers who design and build villas, homes and commercial spaces. We serve both Telangana and Andhra Pradesh.",
+  openGraph: {
+    images: '/icon.png',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },

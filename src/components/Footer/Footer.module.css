@@ -35,7 +35,7 @@
 }
 
 .ctaButton {
-  background-color: var(--color-aged-brass);
+  background-color: var(--color-aged-brass-dark);
   color: var(--color-pure-white);
   padding: 12px 24px;
   font-size: 14px;
@@ -140,13 +140,13 @@
   width: 16px;
   height: 16px;
   margin-top: 2px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
   opacity: 0.9;
 }
 
 .phone {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-aged-brass) !important;
+  color: var(--color-aged-brass-light) !important;
   opacity: 1 !important;
 }
 
@@ -192,7 +192,7 @@
 }
 
 .creditLink:hover {
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

@@ -110,7 +110,7 @@
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   margin-bottom: 20px;
 }
 
@@ -162,11 +162,11 @@
 
 .ctaButton {
   display: inline-block;
-  background-color: #f04f26;
+  background-color: var(--color-aged-brass-dark);
   color: #ffffff;
   padding: 12px 28px;
   border-radius: 999px;
-  border: 1.5px solid #f04f26;
+  border: 1.5px solid var(--color-aged-brass-dark);
   font-weight: 600;
   font-size: 16px;
   box-shadow: 0 4px 14px rgba(240, 79, 38, 0.25);
@@ -176,8 +176,8 @@
   text-align: center;
 }
 .ctaButton:hover {
-  background-color: #d63e17;
-  border-color: #d63e17;
+  background-color: #a32c0f;
+  border-color: #a32c0f;
   text-decoration: none;
   transform: translateY(-2px);
   cursor: pointer;

@@ -10,7 +10,7 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
   margin-bottom: var(--space-16);
 }
 
@@ -49,7 +49,7 @@
 .figureValue {
   font-family: var(--font-bodoni), serif;
   font-size: 48px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   line-height: 1;
 }
 
@@ -120,7 +120,7 @@
 .valuesSub {
   font-family: var(--font-bodoni), serif;
   font-size: 18px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
   margin-bottom: var(--space-24);
 }
 
@@ -163,12 +163,12 @@
   flex-direction: column;
   gap: var(--space-16);
   padding-top: var(--space-24);
-  border-top: 2px solid var(--color-aged-brass);
+  border-top: 2px solid var(--color-aged-brass-light);
 }
 
 .valueIcon {
   font-size: 24px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
 }
 
 .valueCard h3 {
@@ -246,7 +246,7 @@
     flex-direction: column;
     gap: var(--space-16);
     padding: var(--space-24) 0 0 0;
-    border-top: 3px solid var(--color-aged-brass);
+    border-top: 3px solid var(--color-aged-brass-dark);
     border-left: none;
   }
 }
@@ -254,7 +254,7 @@
 .timelineYear {
   font-family: var(--font-bodoni), serif;
   font-size: 28px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   line-height: 1;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .textLink {
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   font-weight: var(--font-weight-medium);
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -339,7 +339,7 @@
 }
 
 .leaderQual {
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   font-weight: var(--font-weight-medium);
   font-size: 14px;
 }
@@ -349,7 +349,7 @@
   font-style: italic;
   font-size: 16px;
   color: var(--color-deccan-slate);
-  border-left: 3px solid var(--color-aged-brass);
+  border-left: 3px solid var(--color-aged-brass-dark);
   padding-left: var(--space-16);
   margin-top: var(--space-8);
   opacity: 0.9;
@@ -386,7 +386,7 @@
 
 .officePhone {
   display: inline-block;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-light);
   font-weight: var(--font-weight-semibold);
   font-size: 20px;
   margin-top: var(--space-8);
@@ -421,7 +421,7 @@
 
 .ctaButton {
   display: inline-block;
-  background-color: var(--color-aged-brass);
+  background-color: var(--color-aged-brass-dark);
   color: var(--color-pure-white);
   padding: 16px 32px;
   border-radius: 2px;

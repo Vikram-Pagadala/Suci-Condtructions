@@ -57,7 +57,7 @@
 }
 
 .mobileTabActive {
-  background-color: var(--color-aged-brass);
+  background-color: var(--color-aged-brass-dark);
   color: var(--color-pure-white);
 }
 
@@ -122,7 +122,7 @@
 .price {
   font-family: var(--font-bodoni), serif;
   font-size: 32px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   line-height: 1;
 }
 
@@ -180,12 +180,12 @@
 }
 
 .accordionButton:hover {
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
 }
 
 .accordionIcon {
   font-size: 18px;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
   flex-shrink: 0;
   width: 20px;
   text-align: center;
@@ -224,7 +224,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--color-aged-brass);
+  color: var(--color-aged-brass-dark);
 }
 
 /* ============================================
@@ -235,7 +235,7 @@
   text-align: center;
   margin: var(--space-16);
   padding: var(--space-12) var(--space-16);
-  background-color: var(--color-aged-brass);
+  background-color: var(--color-aged-brass-dark);
   color: var(--color-pure-white);
   font-weight: var(--font-weight-semibold);
   font-size: 13px;
@@ -264,8 +264,8 @@
 
 .compareToggle {
   background: transparent;
-  border: 1.5px solid var(--color-aged-brass);
-  color: var(--color-aged-brass);
+  border: 1.5px solid var(--color-aged-brass-dark);
+  color: var(--color-aged-brass-dark);
   padding: var(--space-12) var(--space-32);
   border-radius: 2px;
   font-family: var(--font-manrope), sans-serif;
@@ -276,7 +276,7 @@
 }
 
 .compareToggle:hover {
-  background-color: var(--color-aged-brass);
+  background-color: var(--color-aged-brass-dark);
   color: var(--color-pure-white);
 }
 
@@ -343,13 +343,13 @@
   opacity: 0.85;
 }
 
-.recommended { border: 2px solid var(--color-aged-brass); box-shadow: 0 8px 24px rgba(15, 32, 39, 0.1); }
+.recommended { border: 2px solid var(--color-aged-brass-dark); box-shadow: 0 8px 24px rgba(15, 32, 39, 0.1); }
 .card { border-width: 2px; }
 .badgeSlot { min-height: 32px; }
-.badge { display: inline-block; padding: 3px 10px; background: var(--color-aged-brass); color: white; font-size: 11px; border-radius: 12px; }
+.badge { display: inline-block; padding: 3px 10px; background: var(--color-aged-brass-dark); color: white; font-size: 11px; border-radius: 12px; }
 .packageName { min-height: 28px; }
 .recommendationBody { padding: 24px; flex: 1; font-size: 14px; }
 .bestFor { min-height: 70px; font-weight: 600; margin-bottom: 16px; }
 .recommendationBody ul { padding-left: 18px; display: grid; gap: 12px; }
-.recommendationBody li::marker { color: var(--color-aged-brass); }
+.recommendationBody li::marker { color: var(--color-aged-brass-dark); }
 @media (min-width: 600px) and (max-width: 899px) { .cardsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

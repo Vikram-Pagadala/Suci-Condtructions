@@ -4,45 +4,20 @@ import styles from './page.module.css';
 import HeroReveal from '@/components/HeroReveal/HeroReveal';
 import Packages from '@/components/Packages/Packages';
 
-export const metadata: Metadata = {
-  title: "Top Construction Company in Hyderabad | Villa Builders | SUCI Constructions",
-  description: "SUCI Constructions is a leading structural engineer-led construction company in Hyderabad, Telangana. We specialize in villa, residential, and commercial construction.",
-  keywords: "construction company Hyderabad, villa builders Telangana, home construction Andhra Pradesh, structural engineers Hyderabad, residential construction company",
-  openGraph: {
-    title: "Top Construction Company in Hyderabad | SUCI Constructions",
-    description: "Engineer-led construction company in Telangana and Andhra Pradesh. We design and build villas, homes, and commercial spaces.",
-    url: "https://www.suciconstructions.com",
-    siteName: "SUCI Constructions",
-    locale: "en_IN",
-    type: "website",
-  }
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildMetadata({
+  title: "Construction Company in Hyderabad | SUCI Constructions",
+  description: "Engineer-led construction company in Hyderabad. Villas, independent houses and commercial buildings from ₹2,090/sq ft incl. GST. Book a free site visit.",
+  path: "/",
+});
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "SUCI Constructions",
-    "url": "https://www.suciconstructions.com",
-    "logo": "https://www.suciconstructions.com/assets/logos/suci-logo.png",
-    "telephone": "+91 73868 58421",
-    "email": "info@suciconstructions.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2-4-216, Road No. 9A, Snehapuri Colony, New Nagole",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500035",
-      "addressCountry": "IN"
-    }
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <link rel="preload" as="image" href="/assets/images/hero/hero-finished-synced.webp" type="image/webp" />
+      <link rel="preload" as="image" href="/assets/images/hero/hero-structure-synced.webp" type="image/webp" />
       <HeroReveal />
 
       {/* Figures Band */}

@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "About SUCI Constructions | Engineer-Led Builders in Hyderabad",
-  description: "Founded by structural engineers with 40+ years of experience. We build homes with engineering confidence in Telangana and Andhra Pradesh.",
-  keywords: "engineer led construction, structural engineers Hyderabad, SUCI founders, quality construction company Telangana",
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildMetadata({
+  title: "About SUCI Constructions | Engineer-Led Builders, Hyderabad",
+  description: "Founded by structural engineers with 40+ years of experience. Meet the team behind SUCI Constructions, building in Telangana and Andhra Pradesh.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "About", path: "/about" }]} />
       <section className={styles.hero}>
         <div className="container">
           <p className={styles.heroEyebrow}>About SUCI Constructions</p>

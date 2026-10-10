@@ -271,7 +271,7 @@ export default function PricingTable() {
       <div className={styles.ctaBand}>
         <h2>Ready to get started?</h2>
         <p style={{ textAlign: "center" }}>Book a free consultation and our engineer will discuss the best package for your needs.</p>
-        <Link href={`/contact?plan=${recommendedPlan.name}`} className={styles.ctaButton}>
+        <Link href={`/contact?plan=${encodeURIComponent(recommendedPlan.name)}`} className={styles.ctaButton}>
           Book a consultation
         </Link>
       </div>

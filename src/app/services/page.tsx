@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const serviceGroups = [
   {
@@ -68,15 +69,18 @@ const serviceGroups = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Construction & Structural Engineering Services | SUCI Constructions",
-  description: "Complete construction services from start to finish. Residential, villa, commercial, and industrial construction, plus architecture and structural engineering.",
-  keywords: "structural engineering Hyderabad, architecture planning Telangana, villa construction services, commercial construction Hyderabad, home renovation AP",
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildMetadata({
+  title: "Construction Services in Hyderabad | SUCI Constructions",
+  description: "House, villa, commercial and PEB construction, plus architecture, structural design, interiors and renovation in Hyderabad, Telangana and AP.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Services", path: "/services" }]} />
       <section className={styles.hero}>
         <div className="container">
           <p className={styles.heroEyebrow}>What we do</p>

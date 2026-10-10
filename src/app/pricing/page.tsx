@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import PricingTable from "@/components/PricingTable/PricingTable";
 import styles from "./page.module.css";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Construction Packages & Pricing | Hyderabad Home Builders | SUCI",
-  description: "Transparent construction packages in Hyderabad and Telangana. See our Basic, Standard, and Premium pricing for building your dream home.",
-  keywords: "home construction cost Hyderabad, building packages Telangana, construction pricing AP, villa construction cost per sqft",
-};
+import { buildMetadata } from '@/lib/seo';
+import { site } from '@/lib/site';
+
+export const metadata: Metadata = buildMetadata({
+  title: `House Construction Cost in Hyderabad | ₹${site.packages.basic.price}–₹${site.packages.elite.price}/sq ft`,
+  description: `House construction packages in Hyderabad from ₹${site.packages.basic.price} to ₹${site.packages.elite.price} per sq ft incl. GST. Compare Basic, Value Added, Premium and Elite, brands listed.`,
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Pricing", path: "/pricing" }]} />
       <section className={styles.hero}>
         <div className="container">
           <p className={styles.heroEyebrow}>Pricing &amp; Packages</p>

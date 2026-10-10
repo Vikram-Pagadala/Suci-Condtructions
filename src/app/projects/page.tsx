@@ -1,39 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import styles from "./page.module.css";
-import ProjectImage from "./ProjectImage";
+import ProjectsList from "./ProjectsList";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/seo";
 
-const projects = [
-  { id: 1, location: "Chikkadpally", floors: "G+3", type: "Residential", category: "Residential", image: "/assets/images/projects/chikkadpally-g3.jpg" },
-  { id: 2, location: "Champapet", floors: "G+2", type: "Residential", category: "Residential", image: "/assets/images/projects/champapet-g2.jpg" },
-  { id: 3, location: "Erragadda", floors: "S+4", type: "Residential", category: "Residential", image: "/assets/images/projects/erragadda-s4.jpg" },
-  { id: 4, location: "Nagole, Samathapuri Colony", floors: "S+4", type: "Commercial", category: "Commercial", image: "/assets/images/projects/nagole-samathapuri-s4.jpg" },
-  { id: 5, location: "Nagole, Snehapuri Colony", floors: "S+3", type: "Semi-commercial", category: "Commercial", image: "/assets/images/projects/nagole-snehapuri-s3.jpg" },
-];
+export const metadata: Metadata = buildMetadata({
+  title: "Construction Projects in Hyderabad | SUCI Constructions",
+  description: "Residential and commercial buildings by SUCI Constructions in Nagole, Champapet, Chikkadpally and Erragadda, Hyderabad. G+2 to S+4 projects.",
+  path: "/projects",
+});
 
-const filters = ["All", "Residential", "Commercial"];
-
-export const metadata: Metadata = {
-  title: "Our Construction Projects | Villas & Commercial Buildings | SUCI",
-  description: "Explore our portfolio of completed and ongoing construction projects in Hyderabad, Telangana, and Andhra Pradesh.",
-  keywords: "construction projects Hyderabad, villa designs Telangana, commercial buildings AP, completed homes portfolio",
-};
-
-export default async function ProjectsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ type?: string }>;
-}) {
-  const params = await searchParams;
-  const currentFilter = params.type || "All";
-
-  const filteredProjects =
-    currentFilter === "All"
-      ? projects
-      : projects.filter((p) => p.category === currentFilter);
-
+export default function ProjectsPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Projects", path: "/projects" }]} />
       <section className={styles.hero}>
         <div className="container">
           <h1 className="display-text">Built work.</h1>
@@ -43,56 +25,9 @@ export default async function ProjectsPage({
         </div>
       </section>
 
-      <section className={styles.filterSection}>
-        <div className="container">
-          <div className={styles.filterBar}>
-            {filters.map((filter) => (
-              <Link
-                key={filter}
-                href={filter === "All" ? "/projects" : `/projects?type=${filter}`}
-                className={`${styles.filterLink} ${currentFilter === filter ? styles.active : ""}`}
-                aria-current={currentFilter === filter ? "page" : undefined}
-              >
-                {filter}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.gridSection}>
-        <div className={`container ${styles.grid}`}>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project) => (
-              <article key={project.id} className={styles.card}>
-                <div className={styles.cardImage}>
-                  <ProjectImage 
-                    src={project.image} 
-                    alt={`${project.floors} ${project.type} building in ${project.location}, Hyderabad`} 
-                  />
-                  <div className={styles.cardOverlay}>
-                    <span className={styles.cardType}>{project.type}</span>
-                  </div>
-                  <div className={styles.representativeCaption}>Representative view</div>
-                </div>
-                <div className={styles.cardInfo}>
-                  <h3>{project.location}</h3>
-                  <p>
-                    {project.floors} {project.type ? `· ${project.type}` : ""}
-                  </p>
-                </div>
-              </article>
-            ))
-          ) : (
-            <div className={styles.emptyState}>
-              <p>No projects found in this category yet.</p>
-              <Link href="/projects" className={styles.clearFilter}>
-                View all projects
-              </Link>
-            </div>
-          )}
-        </div>
-      </section>
+      <Suspense fallback={<div className="container">Loading projects...</div>}>
+        <ProjectsList />
+      </Suspense>
 
       {/* CTA Band */}
       <section className={styles.ctaBand}>

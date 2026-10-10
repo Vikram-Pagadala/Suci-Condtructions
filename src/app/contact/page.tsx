@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import styles from "./page.module.css";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Contact SUCI Constructions | Book a Free Consultation in Hyderabad",
-  description: "Get in touch with SUCI Constructions for home, villa, or commercial building projects in Telangana and AP. Book a free consultation with our engineers.",
-  keywords: "contact construction company Hyderabad, book consultation builders Telangana, SUCI constructions contact, structural engineer consultation",
-};
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildMetadata({
+  title: "Contact SUCI Constructions | Nagole, Hyderabad",
+  description: "Call +91 73868 58421 or visit SUCI Constructions in New Nagole, Hyderabad. Free consultation, and an engineer visits your plot in 2 working days.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Contact", path: "/contact" }]} />
       <section className={styles.hero}>
         <div className="container">
           <h1 className="display-text">Let&apos;s talk.</h1>

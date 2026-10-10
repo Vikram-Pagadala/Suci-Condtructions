@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 import { buildMetadata } from '@/lib/seo';
@@ -158,8 +159,8 @@ export default function AboutPage() {
           <div className={styles.leaderGrid}>
             {/* Founder 1: Er. C. A. Prasad */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
-                <img src="/assets/images/founders/founder1.jpeg" alt="Er. C. A. Prasad" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent", position: "relative" }}>
+                <Image src="/assets/images/founders/founder1.jpeg" alt="Er. C. A. Prasad" fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: "cover" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Er. C. A. Prasad</h3>
@@ -173,8 +174,8 @@ export default function AboutPage() {
 
             {/* Founder 2: Dr. C. S. Rao */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
-                <img src="/assets/images/founders/founder2.jpeg" alt="Dr. C. S. Rao" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent", position: "relative" }}>
+                <Image src="/assets/images/founders/founder2.jpeg" alt="Dr. C. S. Rao" fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: "cover" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Dr. C. S. Rao</h3>
@@ -188,8 +189,8 @@ export default function AboutPage() {
 
             {/* Founder 3: Siva Bharath Pulugu */}
             <div className={styles.leaderCard}>
-              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent" }}>
-                <img src="/assets/images/founders/founder3.jpeg" alt="Siva Bharath Pulugu" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
+              <div className={styles.leaderImagePlaceholder} style={{ background: "transparent", position: "relative" }}>
+                <Image src="/assets/images/founders/founder3.jpeg" alt="Siva Bharath Pulugu" fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: "cover", objectPosition: "top" }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Siva Bharath Pulugu</h3>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
@@ -32,7 +33,7 @@ export default function Header() {
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo */}
           <Link href="/" className={styles.logo} onClick={closeMenu}>
-            <img src="/assets/logos/suci-logo.png" alt="SUCI Constructions" />
+            <Image src="/assets/logos/suci-logo.png" alt="SUCI Constructions" width={300} height={122} priority />
           </Link>
 
           {/* Desktop Nav */}

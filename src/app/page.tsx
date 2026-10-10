@@ -16,8 +16,6 @@ export default function Home() {
 
   return (
     <>
-      <link rel="preload" as="image" href="/assets/images/hero/hero-finished-synced.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/assets/images/hero/hero-structure-synced.webp" type="image/webp" />
       <HeroReveal />
 
       {/* Figures Band */}

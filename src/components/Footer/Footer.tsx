@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { useEffect, useRef } from 'react';
 
@@ -36,7 +37,7 @@ export default function Footer() {
         <div className={styles.mainFooter}>
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <img src="/assets/logos/suci-logo-white.png" alt="SUCI Constructions" />
+              <Image src="/assets/logos/suci-logo-white.png" alt="SUCI Constructions" width={300} height={122} />
             </Link>
             <p className={styles.description}>
               We&apos;re structural engineers building high-quality homes and commercial spaces. We serve both Telangana and Andhra Pradesh.

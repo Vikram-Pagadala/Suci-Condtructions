@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./HeroReveal.module.css";
 
@@ -154,14 +155,14 @@ export default function HeroReveal() {
     >
       <div ref={heroRef} className={styles.imageStage}>
         {/* Bottom layer: separate background image (finished building) */}
-        <picture className={`${styles.layer} ${styles.layerFinal}`}>
-          <img src="/assets/images/hero/hero-finished-synced.webp" alt="Completed SUCI Constructions building" width={1672} height={941} fetchPriority="high" draggable={false} />
-        </picture>
+        <div className={`${styles.layer} ${styles.layerFinal}`}>
+          <Image src="/assets/images/hero/hero-finished-synced.webp" alt="Completed SUCI Constructions building" width={1672} height={941} priority draggable={false} />
+        </div>
 
         {/* Top layer: structure image as the main visual (masked) */}
-        <picture className={`${styles.layer} ${styles.layerStructure}`}>
-          <img src="/assets/images/hero/hero-structure-synced.webp" alt="RCC column and beam frame of the same SUCI Constructions building" width={1672} height={941} fetchPriority="high" draggable={false} />
-        </picture>
+        <div className={`${styles.layer} ${styles.layerStructure}`}>
+          <Image src="/assets/images/hero/hero-structure-synced.webp" alt="RCC column and beam frame of the same SUCI Constructions building" width={1672} height={941} priority draggable={false} />
+        </div>
 
         {/* Lens ring */}
         <div ref={ringRef} className={styles.ring} aria-hidden="true">

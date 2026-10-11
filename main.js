@@ -291,13 +291,13 @@
     }
 
     function updatePricing() {
-      var area = 1500;
+      var area = 1000;
       if (pricingInput) {
         area = parseInt(pricingInput.value, 10);
       } else if (pricingSlider) {
         area = parseInt(pricingSlider.value, 10);
       }
-      if (isNaN(area) || area < 100) area = 1500;
+      if (isNaN(area) || area < 100) area = 1000;
 
       // Update sticky header total prices
       planTotalEls.forEach(function (el) {
@@ -465,7 +465,7 @@
   if (fallbackSlider && fallbackInput && packageDisplays.length > 0) {
     function updateFallback(val) {
       var a = parseInt(val, 10);
-      if (isNaN(a) || a < 100) a = 1500;
+      if (isNaN(a) || a < 100) a = 1000;
       packageDisplays.forEach(function (disp) {
         var r = parseInt(disp.getAttribute('data-package-price'), 10);
         if (!isNaN(r)) {
@@ -484,7 +484,7 @@
       updateFallback(this.value);
     });
 
-    updateFallback(fallbackInput.value || 1500);
+    updateFallback(fallbackInput.value || 1000);
   }
 
   // 5. YOUTUBE EMBED LOCAL PROTOCOL HANDLING (contact.html)

@@ -453,6 +453,10 @@
       });
     }
 
+    // Explicitly enforce default 1000 sq ft on load (overriding browser form memory)
+    if (pricingSlider) pricingSlider.value = 1000;
+    if (pricingInput) pricingInput.value = 1000;
+
     // Run initial pricing setup
     updatePricing();
   }

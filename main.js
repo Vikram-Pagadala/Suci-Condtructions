@@ -11,10 +11,11 @@
                window.location.pathname.endsWith('/index.htm') ||
                window.location.pathname === '';
 
-  function onScroll() {
+  var isScrolled = false;
+
+  function updateHeader() {
     if (!header) return;
-    var scrolled = window.scrollY > 80;
-    if (scrolled || !isHome) {
+    if (isScrolled || !isHome) {
       header.classList.add('scrolled');
       header.classList.remove('light-hero');
     } else {
@@ -25,12 +26,28 @@
     }
   }
 
+  function onScroll() {
+    updateHeader();
+  }
+
   if (header) {
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
     if (!isHome) {
       header.classList.remove('light-hero');
       header.classList.add('scrolled');
+    } else if ('IntersectionObserver' in window) {
+      var scrollSentinel = document.createElement('div');
+      scrollSentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:80px;pointer-events:none;opacity:0;';
+      document.body.prepend(scrollSentinel);
+      var headerObserver = new IntersectionObserver(function (entries) {
+        isScrolled = !entries[0].isIntersecting;
+        updateHeader();
+      }, { threshold: 0 });
+      headerObserver.observe(scrollSentinel);
+    } else {
+      window.addEventListener('scroll', function () {
+        isScrolled = window.scrollY > 80;
+        updateHeader();
+      }, { passive: true });
     }
   }
 
@@ -105,6 +122,26 @@
       return a + (b - a) * t;
     }
 
+    var stageWidth = 0;
+    var stageHeight = 0;
+
+    function updateStageRect() {
+      var rect = heroStage.getBoundingClientRect();
+      stageWidth = rect.width;
+      stageHeight = rect.height;
+    }
+
+    if (window.ResizeObserver) {
+      var heroRo = new ResizeObserver(function (entries) {
+        if (entries[0] && entries[0].contentRect) {
+          stageWidth = entries[0].contentRect.width;
+          stageHeight = entries[0].contentRect.height;
+        }
+      });
+      heroRo.observe(heroStage);
+    }
+    updateStageRect();
+
     function applyHeroStyles() {
       var r = currR > 0.1 ? currR : 0;
       var x = currX;
@@ -115,9 +152,10 @@
       heroSection.style.setProperty('--r', r + 'px');
       heroSection.style.setProperty('--feather', r > 0 ? (FEATHER + 'px') : '0px');
 
-      var rect = heroStage.getBoundingClientRect();
-      var pxX = (x / 100) * rect.width;
-      var pxY = (y / 100) * rect.height;
+      var w = stageWidth || heroStage.offsetWidth;
+      var h = stageHeight || heroStage.offsetHeight;
+      var pxX = (x / 100) * w;
+      var pxY = (y / 100) * h;
       var diameter = (r + FEATHER * 0.5) * 2;
 
       heroRing.style.transform = 'translate(' + (pxX - diameter / 2) + 'px, ' + (pxY - diameter / 2) + 'px)';

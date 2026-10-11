@@ -12,7 +12,9 @@
   <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="canonical" href="https://www.suciconstructions.com/">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261011">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,7 +76,7 @@
   <header class="site-header light-hero" id="site-header">
     <div class="container header-container">
       <a href="index.html" class="header-logo">
-        <img src="assets/logos/suci-logo.png" alt="SUCI Constructions" width="300" height="122">
+        <img src="assets/logos/suci-logo-200.webp" srcset="assets/logos/suci-logo-200.webp 200w, assets/logos/suci-logo-400.webp 400w" sizes="110px" width="200" height="81" alt="SUCI Constructions">
       </a>
       <nav class="header-nav">
         <a href="about.html">About</a>
@@ -124,12 +126,32 @@
       <div class="hero-image-stage" id="hero-stage">
         <!-- Bottom layer: Finished building -->
         <div class="hero-layer hero-layer-final">
-          <img src="assets/images/hero/hero-finished-synced.webp" alt="Completed SUCI Constructions building in Hyderabad" width="1672" height="941" draggable="false">
+          <picture>
+            <source media="(max-width: 1023px)" sizes="100vw"
+              srcset="assets/images/hero/hero-finished-synced-sq-480.webp 480w,
+                      assets/images/hero/hero-finished-synced-sq-800.webp 800w,
+                      assets/images/hero/hero-finished-synced-sq-941.webp 941w">
+            <img src="assets/images/hero/hero-finished-synced-1672.webp"
+              srcset="assets/images/hero/hero-finished-synced-1280.webp 1280w,
+                      assets/images/hero/hero-finished-synced-1672.webp 1672w"
+              sizes="100vw" width="1672" height="941" fetchpriority="high"
+              alt="Completed SUCI Constructions building in Hyderabad" draggable="false">
+          </picture>
         </div>
 
         <!-- Top layer: RCC column & beam frame structure (masked) -->
         <div class="hero-layer hero-layer-structure" id="hero-layer-structure">
-          <img src="assets/images/hero/hero-structure-synced.webp" alt="RCC column and beam frame of the same SUCI Constructions building" width="1672" height="941" draggable="false">
+          <picture>
+            <source media="(max-width: 1023px)" sizes="100vw"
+              srcset="assets/images/hero/hero-structure-synced-sq-480.webp 480w,
+                      assets/images/hero/hero-structure-synced-sq-800.webp 800w,
+                      assets/images/hero/hero-structure-synced-sq-941.webp 941w">
+            <img src="assets/images/hero/hero-structure-synced-1672.webp"
+              srcset="assets/images/hero/hero-structure-synced-1280.webp 1280w,
+                      assets/images/hero/hero-structure-synced-1672.webp 1672w"
+              sizes="100vw" width="1672" height="941" fetchpriority="high"
+              alt="RCC column and beam frame of the same SUCI Constructions building" draggable="false">
+          </picture>
         </div>
 
         <!-- Lens ring with crosshair ticks and label -->
@@ -345,7 +367,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="assets/logos/suci-logo-white.png" alt="SUCI Constructions" width="300" height="122">
+            <img src="assets/logos/suci-logo-white-400.webp" srcset="assets/logos/suci-logo-white-400.webp 400w, assets/logos/suci-logo-white-600.webp 600w" sizes="200px" width="400" height="162" loading="lazy" decoding="async" alt="SUCI Constructions">
           </a>
           <p class="footer-description">We're structural engineers building high-quality homes and commercial spaces. We serve both Telangana and Andhra Pradesh.</p>
         </div>
@@ -386,6 +408,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=20261011"></script>
 </body>
 </html>

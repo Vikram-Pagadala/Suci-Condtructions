@@ -1,7 +1,45 @@
-/* ============================================
-   GOOGLE FONTS
-   ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=Manrope:wght@400;500;600&display=swap');
+/* ==========================================================================
+   SELF-HOSTED FONTS (Bodoni Moda & Manrope)
+   ========================================================================== */
+/* Bodoni Moda latin-ext (includes Rupee symbol U+20B9) */
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url('assets/fonts/bodoni-moda-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Bodoni Moda latin */
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url('assets/fonts/bodoni-moda-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Manrope latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('assets/fonts/manrope-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Manrope latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('assets/fonts/manrope-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* ============================================
    DESIGN TOKENS
@@ -452,7 +490,7 @@ a:focus-visible {
   gap: var(--space-12);
 }
 .footer-links h4, .footer-contact h4 {
-  color: var(--color-tandur-stone);
+  color: #CBD5E1;
   margin-bottom: var(--space-4);
   font-size: 15px;
   text-transform: uppercase;
@@ -490,7 +528,7 @@ a:focus-visible {
 }
 .footer-phone {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-aged-brass-light) !important;
+  color: #ff9675 !important;
   opacity: 1 !important;
 }
 
@@ -502,14 +540,14 @@ a:focus-visible {
   padding: var(--space-32) 0;
   border-top: 1px solid rgba(138,139,128,0.3);
   font-size: 15px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.75);
   gap: var(--space-12);
   text-align: center;
 }
 @media (min-width: 768px) { .footer-bottom { flex-direction: row; gap: var(--space-16); } }
 .footer-bottom-sep { display: none; }
 @media (min-width: 768px) { .footer-bottom-sep { display: inline; opacity: 0.5; } }
-.footer-credit-link { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s ease; }
+.footer-credit-link { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s ease; }
 .footer-credit-link:hover { color: var(--color-aged-brass-light); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ============================================
@@ -565,6 +603,7 @@ a:focus-visible {
 }
 
 .hero-layer,
+.hero-layer picture,
 .hero-layer img {
   position: absolute;
   inset: 0;
@@ -717,13 +756,14 @@ a:focus-visible {
 
 .cta-button-primary {
   display: inline-block;
-  background-color: var(--color-aged-brass-dark);
+  background-color: #b53513;
   color: #ffffff;
   padding: 12px 28px;
   border-radius: 999px;
-  border: 1.5px solid var(--color-aged-brass-dark);
+  border: 1.5px solid #b53513;
   font-weight: 600;
   font-size: 16px;
+  text-shadow: none;
   box-shadow: 0 4px 14px rgba(240,79,38,0.25);
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;

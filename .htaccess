@@ -1,8 +1,25 @@
-# 1. Canonical Redirect (non-www to www)
+# 1. Canonical URLs and extensionless HTML pages
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTP_HOST} ^suciconstructions\.com$ [NC]
+
+  # Redirect direct homepage aliases, but not internal DirectoryIndex requests.
+  RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?[?\s]
+  RewriteRule ^index(?:\.html)?$ https://www.suciconstructions.com/ [R=301,L]
+
+  # Only redirect browser requests for HTML, avoiding internal rewrite loops.
+  RewriteCond %{THE_REQUEST} \s/+[^?\s]+\.html[?\s]
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^(.+)\.html$ https://www.suciconstructions.com/$1 [R=301,L]
+
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^www\.suciconstructions\.com$ [NC]
   RewriteRule ^(.*)$ https://www.suciconstructions.com/$1 [R=301,L]
+
+  # Serve extensionless URLs using their existing HTML files.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^.]+)$ $1.html [L]
 </IfModule>
 
 # 2. Browser Caching

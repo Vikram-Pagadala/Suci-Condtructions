@@ -9,8 +9,8 @@
 - Hours: Monday – Saturday, 9:30 am – 6:30 pm
 
 ## Pages
-- [Services](https://www.suciconstructions.com/services.html)
-- [Pricing and packages](https://www.suciconstructions.com/pricing.html)
-- [Projects](https://www.suciconstructions.com/projects.html)
-- [About and leadership](https://www.suciconstructions.com/about.html)
-- [Contact](https://www.suciconstructions.com/contact.html)
+- [Services](https://www.suciconstructions.com/services)
+- [Pricing and packages](https://www.suciconstructions.com/pricing)
+- [Projects](https://www.suciconstructions.com/projects)
+- [About and leadership](https://www.suciconstructions.com/about)
+- [Contact](https://www.suciconstructions.com/contact)

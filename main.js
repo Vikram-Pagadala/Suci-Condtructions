@@ -382,7 +382,7 @@
 
       // Update bottom CTA button link
       if (bottomCta) {
-        bottomCta.href = 'contact.html?plan=' + encodeURIComponent(recPlan.name);
+        bottomCta.href = '/contact?plan=' + encodeURIComponent(recPlan.name);
       }
 
       // Update Recommended ribbon & column highlighting
